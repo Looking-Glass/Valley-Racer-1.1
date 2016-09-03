@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
 public class MotoController : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class MotoController : MonoBehaviour
     public float averageRadius = 0.66f;
     [Range(-1f, 0f)]
     public float hitRadius = -0.55f;
-    public bool keyboardForwardControls = false;
+    public bool keyboardForwardControls;
     public bool controlHypercube = true;
     public LayerMask layerMask;
     public GameObject explosion;
@@ -26,28 +26,23 @@ public class MotoController : MonoBehaviour
     Vector3 mountainMovement;
     Vector3 mountainBarMovement;
     float currentHorizSpeed;
-    float tempHorizAccel;
 
     Vector3 theNormal;
     Vector3 theHit;
     Ray[] theRay;
 
     ScoreKeeper scoreKeeper;
-
-    float deathTimer;
-
-    // Use this for initialization
+    
     void Start()
     {
         hyperCube = GameObject.FindGameObjectWithTag("Hypercube");
-        this.transform.position = new Vector3(hyperCube.transform.position.x, this.transform.position.y, this.transform.position.z);
+        transform.position = new Vector3(hyperCube.transform.position.x, transform.position.y, transform.position.z);
         if (GameObject.FindGameObjectWithTag("ScoreKeeper"))
         {
             scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
         }
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         mountainMovement = new Vector3(); // reset mountain movement
@@ -80,8 +75,8 @@ public class MotoController : MonoBehaviour
         }
 
         //cast a ray downward from MotoHolder
-        var motoRay = new Ray(this.transform.position + Vector3.up * 100, -Vector3.up * 200);
-        var motoRayHit = new RaycastHit();
+        var motoRay = new Ray(transform.position + Vector3.up * 100, -Vector3.up * 200);
+        RaycastHit motoRayHit;
         var didHit = Physics.Raycast(motoRay, out motoRayHit, 100f, layerMask);
 
         if (didHit)
@@ -115,9 +110,9 @@ public class MotoController : MonoBehaviour
                             }
                         }
                     }
-                    this.gameObject.SetActive(false);
+                    gameObject.SetActive(false);
                     hyperCube.GetComponent<ScaleBackOnDeath>().ScaleBack();
-                    
+
                     //start the timer which will trigger the player death part.
                     scoreKeeper.OnPlayerDeath();
                     var smgo = GameObject.FindGameObjectWithTag("SerialManager");
@@ -127,7 +122,7 @@ public class MotoController : MonoBehaviour
                         if (sm != null)
                             sm.OnPlayerDeath();
                     }
-                    
+
 
                     //was going to make this trigger the leap motion skip to end but probably best to do in scorekeeper
 
@@ -164,13 +159,13 @@ public class MotoController : MonoBehaviour
                 for (var i = 0; i < numberToAverageNormal; i++)
                 {
 
-                    var angleToRotate = 360f / (float)numberToAverageNormal;
+                    var angleToRotate = 360f / numberToAverageNormal;
                     angleToRotate *= i;
                     var almostForward = Vector3.forward * averageRadius;
                     almostForward = Quaternion.Euler(0, angleToRotate, 0) * almostForward;
                     Ray newRay = motoRay;
                     newRay.origin += almostForward;
-                    didHit = Physics.Raycast(newRay, out motoRayHit);
+                    Physics.Raycast(newRay, out motoRayHit);
                     normalTotal = normalTotal + motoRayHit.normal;
 
                     theRay[i] = newRay;
@@ -189,16 +184,11 @@ public class MotoController : MonoBehaviour
             //move him down the hill if there's a hill
             mountainMovement += new Vector3(-motoRayHit.normal.x, 0, 0) * Time.deltaTime * slopeGravity;
         }
-        else
-        {
-            //meh (used to print NO COLLIDER) but that got old
-        }
-
-
+        
         //input
 
         //horizontal input
-        if (currentHorizSpeed != 0)
+        if (Math.Abs(currentHorizSpeed) > 0.001f)
         {
             mountainMovement -= Vector3.right * currentHorizSpeed * Time.deltaTime * strafeSpeed;
         }
@@ -254,9 +244,9 @@ public class MotoController : MonoBehaviour
         Gizmos.color = Color.red;
         if (theRay != null)
         {
-            for (var i = 0; i < theRay.Length; i++)
+            foreach (var t in theRay)
             {
-                Gizmos.DrawRay(theRay[i].origin, theRay[i].direction * 200);
+                Gizmos.DrawRay(t.origin, t.direction * 200);
             }
         }
     }

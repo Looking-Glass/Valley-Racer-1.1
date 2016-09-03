@@ -14,7 +14,7 @@ public class HeightmapToVert : MonoBehaviour
     MeshCollider meshCollider;
     Material material;
     public Material volumeMaterial;
-    public bool makeVolumetricExperimental;
+    bool makeVolumetricExperimental = false;
     Color mtnColor = Color.black;
 
     public void SetupMountains()
