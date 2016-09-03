@@ -1,23 +1,28 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class SpriteBlink : MonoBehaviour {
+public class SpriteBlink : MonoBehaviour
+{
+    public SpriteRenderer sr;
+    public float blinkInterval = 0.5f;
+    float timer;
+    
+    void Start()
+    {
+        if (sr == null)
+            sr = GetComponent<SpriteRenderer>();
+    }
 
-	SpriteRenderer sr;
-	public float blinkInterval = 0.5f;
-	float timer;
+    // Update is called once per frame
+    void Update()
+    {
+        if (sr == null)
+            return;
 
-	// Use this for initialization
-	void Start () {
-		sr = GetComponent<SpriteRenderer> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		timer += Time.deltaTime;
-		if (timer > blinkInterval) {
-			sr.enabled = !sr.enabled;
-			timer = 0;
-		}
-	}
+        timer += Time.deltaTime;
+        if (timer > blinkInterval)
+        {
+            sr.enabled = !sr.enabled;
+            timer = 0;
+        }
+    }
 }

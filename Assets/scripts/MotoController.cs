@@ -5,13 +5,14 @@ public class MotoController : MonoBehaviour
 {
 
     public GameObject motoChildHolder;
-    public float rotationJerkinessDamp = 0.2f;
-    public float slopeGravity = 4f;
     public float travelSpeed = 12f;
     public float strafeSpeed = 2f;
     public float strafeSensitivity = 5f;
-    public float levelSizeBoundaries = 8f;
     public float turnTilt = 36f;
+    public float rotationJerkinessDamp = 0.2f;
+    public float slopeGravity = 4f;
+    //isn't throwing an error but i might not need it. (legacy?)
+    //public float levelSizeBoundaries = 8f;
     public int numberToAverageNormal = 4;
     public float averageRadius = 0.66f;
     [Range(-1f, 0f)]
@@ -20,9 +21,8 @@ public class MotoController : MonoBehaviour
     public bool controlHypercube = true;
     public LayerMask layerMask;
     public GameObject explosion;
-
     Quaternion tempRot;
-    GameObject hyperCube;
+    GameObject hypercubeHolder;
     Vector3 mountainMovement;
     Vector3 mountainBarMovement;
     float currentHorizSpeed;
@@ -32,17 +32,15 @@ public class MotoController : MonoBehaviour
     Ray[] theRay;
 
     ScoreKeeper scoreKeeper;
-    
+
     void Start()
     {
-        hyperCube = GameObject.FindGameObjectWithTag("Hypercube");
-        transform.position = new Vector3(hyperCube.transform.position.x, transform.position.y, transform.position.z);
+        hypercubeHolder = GameObject.FindGameObjectWithTag("Hypercube");
+        transform.position = new Vector3(hypercubeHolder.transform.position.x, transform.position.y, transform.position.z);
         if (GameObject.FindGameObjectWithTag("ScoreKeeper"))
-        {
             scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
-        }
     }
-    
+
     void Update()
     {
         mountainMovement = new Vector3(); // reset mountain movement
@@ -51,28 +49,18 @@ public class MotoController : MonoBehaviour
         //note that i TURNED OFF keyboard input for the horiz axis, b/c i don't like the mushiness.
         float newHorizInput = Input.GetAxis("Horizontal");
         if (Input.GetKey(KeyCode.LeftArrow))
-        {
             newHorizInput = -1f;
-        }
         if (Input.GetKey(KeyCode.RightArrow))
-        {
             newHorizInput = 1f;
-        }
 
         float newHorizSpeed = 0f;
         if (newHorizInput > currentHorizSpeed)
-        {
             newHorizSpeed = currentHorizSpeed + strafeSensitivity * Time.deltaTime;
-        }
         else if (newHorizInput < currentHorizSpeed)
-        {
             newHorizSpeed = currentHorizSpeed - strafeSensitivity * Time.deltaTime;
-        }
 
         if (Mathf.Abs(newHorizInput - currentHorizSpeed) > strafeSensitivity * Time.deltaTime)
-        {
             currentHorizSpeed = newHorizSpeed;
-        }
 
         //cast a ray downward from MotoHolder
         var motoRay = new Ray(transform.position + Vector3.up * 100, -Vector3.up * 200);
@@ -92,7 +80,7 @@ public class MotoController : MonoBehaviour
                 {
                     //DEATH
                     explosion.GetComponent<Explosion>().Explode();
-                    //hyperCube.GetComponent<CameraShake> ().Shake (0.5f, .5f);
+                    //hypercubeHolder.GetComponent<CameraShake> ().Shake (0.5f, .5f);
                     motoChildHolder.transform.SetParent(null);
                     while (motoChildHolder.transform.childCount > 0)
                     {
@@ -111,7 +99,7 @@ public class MotoController : MonoBehaviour
                         }
                     }
                     gameObject.SetActive(false);
-                    hyperCube.GetComponent<ScaleBackOnDeath>().ScaleBack();
+                    hypercubeHolder.GetComponent<ScaleBackCameraOnDeath>().ScaleBack();
 
                     //start the timer which will trigger the player death part.
                     scoreKeeper.OnPlayerDeath();
@@ -141,10 +129,10 @@ public class MotoController : MonoBehaviour
             //hypercube mostly follows the motorcycle on the y axis, plus an offset to make sure the motorcycle is near the bottom
             if (controlHypercube)
             {
-                hyperCube.transform.position = new Vector3(
-                    hyperCube.transform.position.x,
+                hypercubeHolder.transform.position = new Vector3(
+                    hypercubeHolder.transform.position.x,
                     motoChildHolder.transform.position.y * 0.8f + .8f,
-                    hyperCube.transform.position.z
+                    hypercubeHolder.transform.position.z
                 );
             }
 
@@ -184,7 +172,7 @@ public class MotoController : MonoBehaviour
             //move him down the hill if there's a hill
             mountainMovement += new Vector3(-motoRayHit.normal.x, 0, 0) * Time.deltaTime * slopeGravity;
         }
-        
+
         //input
 
         //horizontal input
@@ -200,9 +188,9 @@ public class MotoController : MonoBehaviour
         //make the cube tilt a little with it.
         if (controlHypercube)
         {
-            hyperCube.transform.localEulerAngles = new Vector3(
-                hyperCube.transform.localEulerAngles.x,
-                hyperCube.transform.localEulerAngles.y,
+            hypercubeHolder.transform.localEulerAngles = new Vector3(
+                hypercubeHolder.transform.localEulerAngles.x,
+                hypercubeHolder.transform.localEulerAngles.y,
                 -currentHorizSpeed * (turnTilt / 3)
             );
         }
@@ -210,9 +198,7 @@ public class MotoController : MonoBehaviour
         //take all the little mountain squares and move them horizontally
         GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountains");
         foreach (GameObject mountain in mountains)
-        {
             mountain.transform.localPosition += mountainMovement;
-        }
 
         //take the mountain bars and move them forward, automatically or with keyboard controls.
         mountainBarMovement = new Vector3();
@@ -226,14 +212,11 @@ public class MotoController : MonoBehaviour
 
         GameObject[] mountainBars = GameObject.FindGameObjectsWithTag("MountainBars");
         foreach (GameObject mountainBar in mountainBars)
-        {
             mountainBar.transform.localPosition += mountainBarMovement;
-        }
+
         //also add the distance travelled to score.
         if (scoreKeeper != null)
-        {
             scoreKeeper.AddToScore(mountainBarMovement.z);
-        }
     }
 
     void OnDrawGizmos()
