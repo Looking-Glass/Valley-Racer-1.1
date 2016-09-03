@@ -36,9 +36,6 @@ public class MotoController : MonoBehaviour
 
     float deathTimer;
 
-    //leap motion controls
-    LeapMotoControls leapMotoControls;
-
     // Use this for initialization
     void Start()
     {
@@ -48,10 +45,6 @@ public class MotoController : MonoBehaviour
         {
             scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
         }
-
-        var leapMotoGameObject = GameObject.Find("Leap Moto Controls");
-        if (leapMotoGameObject != null)
-            leapMotoControls = GameObject.Find("Leap Moto Controls").GetComponent<LeapMotoControls>();
     }
 
     // Update is called once per frame
@@ -85,13 +78,6 @@ public class MotoController : MonoBehaviour
         {
             currentHorizSpeed = newHorizSpeed;
         }
-
-        //check the leap motion for the steering value.
-        if (leapMotoControls != null && leapMotoControls.CheckForTwoHands())
-        {
-            currentHorizSpeed = leapMotoControls.GetLeapSteeringValue();
-        }
-
 
         //cast a ray downward from MotoHolder
         var motoRay = new Ray(this.transform.position + Vector3.up * 100, -Vector3.up * 200);
@@ -133,7 +119,15 @@ public class MotoController : MonoBehaviour
                     hyperCube.GetComponent<ScaleBackOnDeath>().ScaleBack();
                     
                     //start the timer which will trigger the player death part.
-                    EventManager.TriggerEvent("PlayerDeath");
+                    scoreKeeper.OnPlayerDeath();
+                    var smgo = GameObject.FindGameObjectWithTag("SerialManager");
+                    if (smgo != null)
+                    {
+                        var sm = smgo.GetComponent<serialManager>();
+                        if (sm != null)
+                            sm.OnPlayerDeath();
+                    }
+                    
 
                     //was going to make this trigger the leap motion skip to end but probably best to do in scorekeeper
 

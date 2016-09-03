@@ -62,7 +62,7 @@ public class MountainSpawner : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (nextBar.transform.position.z < -(nextBar.GetComponentInChildren<HeightmapToVert> ().peakTexture.height + 1) / 2) {
+		if (nextBar.transform.position.z < -(nextBar.GetComponentInChildren<HeightmapToVert> ().peakTexture.height + 1f) / 2f) {
 			levelBarIndex++;
 			if (levelBarIndex >= levelString.Length) {
 				levelBarIndex = 0;

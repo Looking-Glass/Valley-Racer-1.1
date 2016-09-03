@@ -11,7 +11,6 @@ public class serialManager : MonoBehaviour
     public SerialPort port;
     public int baudRate = 115200;
     private string data = "";
-    private EventManager manager;
     private ScoreKeeper scoreKeeper;
     private Boolean started = false;
 
@@ -36,11 +35,10 @@ public class serialManager : MonoBehaviour
         try
         {
             scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
-            EventManager.StartListening("PlayerDeath", OnPlayerDeath);
         }
-        catch (Exception e)
+        catch (Exception)
         {
-
+            // ignored
         }
     }
 
@@ -100,14 +98,11 @@ public class serialManager : MonoBehaviour
         credits += 1;
     }
 
-    void OnPlayerDeath()
+    public void OnPlayerDeath()
     {
-        int score = (int)(scoreKeeper.CurrentScore);
+        int score = (int)scoreKeeper.CurrentScore;
         Debug.Log("score:  " + score);
-        port.Write(score.ToString() + "\n");
-
-        //go into detached view for about 5 seconds (or 2 secs minimum until a button is pressed) then cycle back to main screen
-
+        port.Write(score + "\n");
     }
 
     void OnApplicationQuit()

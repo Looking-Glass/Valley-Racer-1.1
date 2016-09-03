@@ -53,7 +53,7 @@ public class SerialControllerKA : MonoBehaviour
     private Thread thread;
     private SerialThreadKA _serialThreadKa;
 
-    SerialPort serialPort;
+    SerialPort serialPort = null;
     
     //kyles mod
     string portTextFilename = "port.txt";

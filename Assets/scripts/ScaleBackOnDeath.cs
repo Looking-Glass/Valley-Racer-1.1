@@ -2,7 +2,6 @@
 
 public class ScaleBackOnDeath : MonoBehaviour
 {
-    private float _scaleBackFactor = 2;
     public Transform manTransform;
 
     public bool ScaleBackActive;

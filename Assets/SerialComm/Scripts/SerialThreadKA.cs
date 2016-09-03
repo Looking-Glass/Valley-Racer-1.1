@@ -151,6 +151,9 @@ public class SerialThreadKA
                     // Unity's thread, this doesn't affect frame-rate
                     // throughput.
                     Thread.Sleep(delayBeforeReconnecting);
+
+                    //kyle says, stop requesting after one failure.
+                    RequestStop();
                 }
             }
 

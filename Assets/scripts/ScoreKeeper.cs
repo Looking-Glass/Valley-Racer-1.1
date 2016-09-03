@@ -10,21 +10,12 @@ public class ScoreKeeper : MonoBehaviour
     public float bestDistance;
 
     public Text scoreText;
-    int digits = 100;
 
     public bool inMiles;
     public bool EnterName;
     public Text InitialsText;
     public GameObject NewHighScore;
-    bool newHighScore;
     int rankToReplace;
-    float cursorTimer;
-    float cursorTimerMax = 0.75f;
-
-    bool deathTimerActive;
-    float deathTimer;
-
-    public LeapMotoControls leapMotoControls;
 
     public void PlaceScore(float newScore)
     {
@@ -48,10 +39,6 @@ public class ScoreKeeper : MonoBehaviour
         {
             //TODO: this is where the timer goes which will count down until you can restart by hitting enter.
             GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<BonusSceneToggle>().enabled = true;
-            if (leapMotoControls != null)
-            {
-                leapMotoControls.selfCheck = true;
-            }
         }
     }
 
@@ -240,7 +227,6 @@ public class ScoreKeeper : MonoBehaviour
         if (CurrentScore > bestDistance)
         {
             bestDistance = CurrentScore;
-            newHighScore = true;
         }
 
         var distToDisplay = CurrentScore;
@@ -268,7 +254,7 @@ public class ScoreKeeper : MonoBehaviour
         return digits;
     }
 
-    void OnPlayerDeath()
+    public void OnPlayerDeath()
     {
         PlaceScore(CurrentScore);
     }
@@ -285,14 +271,5 @@ public class ScoreKeeper : MonoBehaviour
         {
             bestDistance = PlayerPrefs.GetFloat("HiScore");
         }
-        EventManager.StartListening("PlayerDeath", OnPlayerDeath);
-    }
-    void OnDisable()
-    {
-        EventManager.StopListening("PlayerDeath", OnPlayerDeath);
-    }
-    void Destroy()
-    {
-        EventManager.StopListening("PlayerDeath", OnPlayerDeath);
     }
 }
