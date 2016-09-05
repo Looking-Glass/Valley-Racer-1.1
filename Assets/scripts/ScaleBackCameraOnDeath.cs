@@ -3,14 +3,21 @@
 public class ScaleBackCameraOnDeath : MonoBehaviour
 {
     public Transform flyingRiderTransform;
+    public float easeSpeed = 100;
     public bool scaleBackActive;
 
     private void Update()
     {
         if (scaleBackActive)
         {
-            //This is a bad lerp but the worst that happens at 1200fps is the camera follows the player exactly
-            transform.position = Vector3.Lerp(transform.position, flyingRiderTransform.position, 0.2f);
+            //Eased Follow
+            if (transform.position != flyingRiderTransform.position)
+            {
+                var mov = easeSpeed;
+                mov *= Time.deltaTime;
+                mov *= Vector3.Distance(flyingRiderTransform.position, transform.position);
+                transform.position = Vector3.MoveTowards(transform.position, flyingRiderTransform.position, mov);
+            }
             transform.localEulerAngles = new Vector3(30, transform.localEulerAngles.y, transform.localEulerAngles.z);
         }
     }

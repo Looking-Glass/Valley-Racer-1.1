@@ -15,6 +15,11 @@ public class BonusSceneToggle : MonoBehaviour
                 ToggleScene();
     }
 
+    void OnEnable()
+    {
+        timer = 0;
+    }
+
     public void ToggleScene()
     {
         SceneManager.LoadScene(sceneToGo);

@@ -37,8 +37,7 @@ public class MotoController : MonoBehaviour
     {
         hypercubeHolder = GameObject.FindGameObjectWithTag("Hypercube");
         transform.position = new Vector3(hypercubeHolder.transform.position.x, transform.position.y, transform.position.z);
-        if (GameObject.FindGameObjectWithTag("ScoreKeeper"))
-            scoreKeeper = GameObject.FindGameObjectWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     void Update()
@@ -103,17 +102,6 @@ public class MotoController : MonoBehaviour
 
                     //start the timer which will trigger the player death part.
                     scoreKeeper.OnPlayerDeath();
-                    var smgo = GameObject.FindGameObjectWithTag("SerialManager");
-                    if (smgo != null)
-                    {
-                        var sm = smgo.GetComponent<serialManager>();
-                        if (sm != null)
-                            sm.OnPlayerDeath();
-                    }
-
-
-                    //was going to make this trigger the leap motion skip to end but probably best to do in scorekeeper
-
                 }
                 else
                 {

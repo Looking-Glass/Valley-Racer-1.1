@@ -13,13 +13,10 @@ public class HeightmapToVert : MonoBehaviour
     Mesh bumpyMesh;
     MeshCollider meshCollider;
     Material material;
-    public Material volumeMaterial;
-    bool makeVolumetricExperimental = false;
     Color mtnColor = Color.black;
 
     public void SetupMountains()
     {
-
         meshFilter = GetComponent<MeshFilter>();
         meshCollider = GetComponent<MeshCollider>();
         material = GetComponent<MeshRenderer>().material;
@@ -35,9 +32,7 @@ public class HeightmapToVert : MonoBehaviour
         Vector3[] verts = new Vector3[w1 * h];
         bool[] peaks = new bool[verts.Length];
         Vector2[] uvs = new Vector2[verts.Length];
-
-
-
+        
         //create vertices
         for (var y = 0; y < h; y++)
         {
@@ -53,25 +48,21 @@ public class HeightmapToVert : MonoBehaviour
                     heightColor = hillTexture.GetPixels()[(y * w) + 0].r;
                 }
                 verts[(y * w1) + x] = new Vector3(x, heightColor * maxHeight, y);
-                uvs[(y * w1) + x] = new Vector2((float)x / (w1 - 1), (float)y / (h - 1));
+                uvs[(y * w1) + x] = new Vector2((float) x / (w1 - 1), (float) y / (h - 1));
 
                 if (y > 0)
-                { //don't draw peaks at y = 0. it is just annoying. invisible peaks show up.
-                    float peakColor;
-                    if (x != w)
-                    {
-                        peakColor = peakTexture.GetPixels()[(y * w) + x].g;
-                    }
-                    else
-                    {
-                        peakColor = peakTexture.GetPixels()[(y * w) + 0].g;
-                    }
+                {
+                    //don't draw peaks at y = 0. it is just annoying. invisible peaks show up.
+                    float peakColor = x != w ? 
+                        peakTexture.GetPixels()[y * w + x].g : 
+                        peakTexture.GetPixels()[y * w + 0].g;
                     bool randomPeak = Random.value < percentRandom && y != 0 && y != h - 1;
 
                     if (peakColor > 0 || randomPeak)
                     {
                         if (x != 0)
-                        { //so that there's only one peak per peak
+                        {
+                            //so that there's only one peak per peak
                             GameObject newPeak = Instantiate(peak);
                             newPeak.transform.position = verts[(y * w1) + x];
                             newPeak.transform.parent = transform;
@@ -159,7 +150,8 @@ public class HeightmapToVert : MonoBehaviour
                     }
                 }
 
-                mtnTexture.SetPixel(Mathf.RoundToInt(mtnTexture.width * uvs[i].x), Mathf.RoundToInt(mtnTexture.height * uvs[i].y), peakColor);
+                mtnTexture.SetPixel(Mathf.RoundToInt(mtnTexture.width * uvs[i].x),
+                    Mathf.RoundToInt(mtnTexture.height * uvs[i].y), peakColor);
                 for (var j = 0; j < peakRadius; j++)
                 {
 
@@ -178,16 +170,19 @@ public class HeightmapToVert : MonoBehaviour
                 }
             }
             if (i != 0 && (i + 1) % w1 == 0)
-            { //this matches the verts along x = 0 to the ones at x = full width.
+            {
+                //this matches the verts along x = 0 to the ones at x = full width.
                 verts[i - (w1 - 1)] = new Vector3(verts[i - (w1 - 1)].x, verts[i].y, verts[i - (w1 - 1)].z);
             }
         }
 
-        bumpyMesh = new Mesh();
-        bumpyMesh.bounds = mesh.bounds;
-        bumpyMesh.vertices = verts;
-        bumpyMesh.uv = uvs;
-        bumpyMesh.triangles = mesh.triangles;
+        bumpyMesh = new Mesh
+        {
+            bounds = mesh.bounds,
+            vertices = verts,
+            uv = uvs,
+            triangles = mesh.triangles
+        };
         bumpyMesh.RecalculateNormals();
         bumpyMesh.RecalculateBounds();
         meshFilter.mesh = bumpyMesh;
@@ -195,47 +190,5 @@ public class HeightmapToVert : MonoBehaviour
         //finish up texture changes.
         mtnTexture.Apply();
         material.mainTexture = mtnTexture;
-        
-        #region flat faces inside mountain (experimental, and garbage)
-        if (makeVolumetricExperimental)
-        {
-            Vector3[] newVerts = new Vector3[verts.Length * 2];
-            for (var i = 0; i < verts.Length; i++)
-            {
-                newVerts[i] = verts[i];
-                newVerts[verts.Length + i] = verts[i] + Vector3.down * 20;
-            }
-
-            //now the triangles
-            int[] newTriangs = new int[(newVerts.Length - 2) * 6];
-            var newIndex = 0;
-            for (var y = 0; y < h; y++)
-            {
-                for (var x = 0; x < w; x++)
-                {
-                    newTriangs[newIndex++] = (y * w1) + x;
-                    newTriangs[newIndex++] = (y * w1) + (x + 1);
-                    newTriangs[newIndex++] = (y * w1) + x + verts.Length;
-
-                    newTriangs[newIndex++] = (y * w1) + (x + 1) + verts.Length;
-                    newTriangs[newIndex++] = (y * w1) + x + verts.Length;
-                    newTriangs[newIndex++] = (y * w1) + (x + 1);
-                }
-            }
-
-            GameObject volumeChild = new GameObject("mtnVolume");
-            volumeChild.transform.parent = transform;
-            MeshFilter volumeMeshFilter = volumeChild.AddComponent<MeshFilter>();
-            MeshRenderer volumeMeshRenderer = volumeChild.AddComponent<MeshRenderer>();
-            Mesh volumeMesh = new Mesh();
-
-            volumeMesh.vertices = newVerts;
-            volumeMesh.triangles = newTriangs;
-            volumeMesh.RecalculateBounds();
-            volumeMesh.RecalculateNormals();
-            volumeMeshFilter.mesh = volumeMesh;
-            volumeMeshRenderer.material = volumeMaterial;
-        }
     }
-    #endregion
 }

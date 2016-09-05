@@ -1,52 +1,48 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class SpecialRing : MonoBehaviour {
+public class SpecialRing : MonoBehaviour
+{
+    public GameObject specialSprite;
+    public Transform specialRotator;
+    public Transform[] sprites;
+    public Transform[] ghosts;
+    public int numberOfSprites;
+    public float degreesPerSecond;
+    
+    void Start()
+    {
+        sprites = new Transform[numberOfSprites];
+        ghosts = new Transform[numberOfSprites];
 
-	public GameObject specialSprite;
-	public float radius;
-	public int numberOfSprites;
-	public float degreesPerSecond;
+        for (var i = 0; i < numberOfSprites; i++)
+        {
+            //Make sprite
+            var newSpecialSprite = (GameObject)Instantiate(specialSprite, transform.position, Quaternion.identity);
+            newSpecialSprite.transform.parent = transform;
+            newSpecialSprite.GetComponent<SpriteRenderer>().enabled = true;
+            sprites[i] = newSpecialSprite.transform;
 
-	// Use this for initialization
-	void Start () {
-		for (var i = 0; i < numberOfSprites; i++) {
+            //Determine ghost position
+            float angleRadians = (float)i / numberOfSprites;
+            angleRadians *= Mathf.PI * 2;
+            var ghostPosition = new Vector3
+                (Mathf.Cos(angleRadians), 0, Mathf.Sin(angleRadians));
 
-			GameObject newSpecialSprite = (GameObject)Instantiate (specialSprite, this.transform.position, Quaternion.identity);
-			newSpecialSprite.transform.parent = this.transform;
-			newSpecialSprite.GetComponent<SpriteRenderer> ().enabled = true;
+            //Make ghost
+            var ghostGameObject = new GameObject("ghost " + i);
+            ghostGameObject.transform.parent = specialRotator;
+            ghostGameObject.transform.localPosition = ghostPosition;
+            ghosts[i] = ghostGameObject.transform;
+        }
+    }
+    
+    void Update()
+    {
+        //Rotate rotator
+        specialRotator.localEulerAngles += Vector3.up * degreesPerSecond * Time.deltaTime;
 
-			float angleRadians = (float)i / numberOfSprites;
-			angleRadians *= Mathf.PI * 2;
-
-			Vector3 movePosition = new Vector3 (
-                Mathf.Cos (angleRadians) * radius,
-				0,
-				Mathf.Sin (angleRadians) * radius
-            );
-			newSpecialSprite.transform.Translate (movePosition);
-
-		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		this.transform.localEulerAngles += Vector3.up * degreesPerSecond * Time.deltaTime;
-	}
-
-	void OnDrawGizmos () {
-		for (var i = 0; i < numberOfSprites; i++) {
-			float angleRadians = (float)i / numberOfSprites;
-			angleRadians *= Mathf.PI * 2;
-
-			Vector3 vecToDraw = new Vector3 (
-				Mathf.Cos (angleRadians) * radius,
-				0,
-				Mathf.Sin (angleRadians) * radius
-			);
-
-			Gizmos.color = Color.cyan;
-			Gizmos.DrawLine (this.transform.position, this.transform.position + vecToDraw);
-		}
-	}
+        //Put the sprite's position at it's paired ghost's position
+        for (int i = 0; i < sprites.Length; i++)
+            sprites[i].position = ghosts[i].position;
+    }
 }

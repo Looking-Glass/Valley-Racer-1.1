@@ -5,14 +5,13 @@ public class SpriteBlink : MonoBehaviour
     public SpriteRenderer sr;
     public float blinkInterval = 0.5f;
     float timer;
-    
+
     void Start()
     {
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (sr == null)

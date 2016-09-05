@@ -3,7 +3,7 @@
 [RequireComponent(typeof(SpriteRenderer))]
 public class BillboardedHyperSprite : MonoBehaviour
 {
-    public Transform hypercubeTransform;
+    Transform hypercubeTransform;
 
     void Start()
     {
@@ -13,11 +13,8 @@ public class BillboardedHyperSprite : MonoBehaviour
 
     void Update()
     {
-        transform.eulerAngles = new Vector3(
-            hypercubeTransform.eulerAngles.x,
-            hypercubeTransform.eulerAngles.y,
-            transform.eulerAngles.z
-        );
+        transform.eulerAngles = new Vector3
+            (hypercubeTransform.eulerAngles.x, hypercubeTransform.eulerAngles.y, transform.eulerAngles.z);
     }
 }
 
