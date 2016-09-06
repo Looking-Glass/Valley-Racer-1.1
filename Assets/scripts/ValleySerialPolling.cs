@@ -22,14 +22,8 @@ public class ValleySerialPolling : MonoBehaviour
 		// Send data
 		//---------------------------------------------------------------------
 		
-		//hacky reset on ticket interval
-		if (SceneManager.GetActiveScene().buildIndex == 0)
-		{
-			ticketEvery = ticketInterval;
-		}
-
 		//during game loop
-		if (SceneManager.GetActiveScene().buildIndex == 1)
+		if (SceneManager.GetActiveScene().buildIndex == 2)
 		{
 			var scoreKeeper = GameObject.FindWithTag("ScoreKeeper").GetComponent<ScoreKeeper>();
 			if (scoreKeeper != null)
@@ -60,7 +54,7 @@ public class ValleySerialPolling : MonoBehaviour
 			AddCredit();
 		}
 
-		if (SceneManager.GetActiveScene().buildIndex == 0)
+		if (SceneManager.GetActiveScene().buildIndex == 1)
 		{
 			var blinkyText = GameObject.FindWithTag("BlinkyText");
 			if (credits > 0)

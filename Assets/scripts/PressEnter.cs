@@ -25,12 +25,12 @@ public class PressEnter : MonoBehaviour
                         var asource = sm.GetComponent<AudioSource>();
                         asource.clip = ac;
                         asource.Play();
-                        SceneManager.LoadScene(1);
+                        SceneManager.LoadScene(2);
                     }
                 }
                 else
                 {
-                    SceneManager.LoadScene(1);
+                    SceneManager.LoadScene(2);
                 }
             }
         }

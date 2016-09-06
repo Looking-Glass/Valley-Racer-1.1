@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BonusSceneToggle : MonoBehaviour
 {
-    private float timer;
+    float timer;
     public float littleBuffer = 1f;
     public int sceneToGo;
 

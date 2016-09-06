@@ -78,7 +78,7 @@ public class MotoController : MonoBehaviour
                 if (motoRayHit.normal.z < hitRadius)
                 {
                     //DEATH
-                    explosion.GetComponent<Explosion>().Explode();
+                    explosion.GetComponent<ExplosionOld>().Explode();
                     //hypercubeHolder.GetComponent<CameraShake> ().Shake (0.5f, .5f);
                     motoChildHolder.transform.SetParent(null);
                     while (motoChildHolder.transform.childCount > 0)

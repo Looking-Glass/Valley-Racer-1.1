@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SphereUVChange : MonoBehaviour
+public class ExploSphere : MonoBehaviour
 {
     public float uvMovespeed = 1f;
     float movementTimer;
@@ -8,8 +8,9 @@ public class SphereUVChange : MonoBehaviour
     Vector2[] originalUVs;
     public Gradient gradient;
     Material material;
+    public float movement = 5f;
 
-    void Start()
+    void Awake()
     {
         mesh = GetComponent<MeshFilter>().mesh;
         material = GetComponent<MeshRenderer>().material;
@@ -18,6 +19,7 @@ public class SphereUVChange : MonoBehaviour
         {
             originalUVs[i] = mesh.uv[i];
         }
+
     }
 
     void OnEnable()
@@ -27,8 +29,10 @@ public class SphereUVChange : MonoBehaviour
 
     void Update()
     {
+        var maxLife = 0.45f;
+
         movementTimer += uvMovespeed * Time.deltaTime;
-        if (movementTimer > 0.45f)
+        if (movementTimer > maxLife)
             gameObject.SetActive(false); //This is the death of the object. Should be in an object pool so this is fine.
 
         var uvs = new Vector2[mesh.uv.Length];
@@ -40,5 +44,7 @@ public class SphereUVChange : MonoBehaviour
 
         material.color = gradient.Evaluate(movementTimer * 2);
         mesh.uv = uvs;
+
+        transform.Translate(Vector3.up * movement * Time.deltaTime);
     }
 }

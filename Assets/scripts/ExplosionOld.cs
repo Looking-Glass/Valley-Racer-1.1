@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class ExplosionOld : MonoBehaviour
 {
     float timer;
     public float lifetime = 0.1f;
