@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class ExplosionController : MonoBehaviour
@@ -37,8 +38,11 @@ public class ExplosionController : MonoBehaviour
             var explosion = explosionPool.ActivateObject();
             explosion.transform.localEulerAngles = new Vector3
                 (Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
-            explosion.transform.position = new Vector3
-                (Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius));
+            var scaledRadius = transform.lossyScale * spawnRadius;
+            explosion.transform.position = new Vector3(
+                Random.Range(-scaledRadius.x, scaledRadius.x), 
+                Random.Range(-scaledRadius.y, scaledRadius.y), 
+                Random.Range(-scaledRadius.z, scaledRadius.z));
             explosion.transform.position += transform.position;
             explosion.transform.localScale = Vector3.one * Random.Range(spawnSizeMinimum, spawnSizeMaximum);
 

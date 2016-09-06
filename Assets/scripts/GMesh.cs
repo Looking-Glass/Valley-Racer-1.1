@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class GMesh
 {
+
     public static void MakeTri
         (
         //required params
@@ -60,5 +61,22 @@ public class GMesh
         mesh.SetTriangles(tris, submesh, calculateBounds);
         if (recalculateNormals)
             mesh.RecalculateNormals();
+    }
+
+    public static void AddUVs(Mesh mesh, List<Vector2> uvs)
+    {
+        Debug.Log("Vertices in mesh: " + mesh.vertexCount);
+        Debug.Log("UVs in mesh: " + mesh.uv.Length);
+        var meshUV = new List<Vector2>(mesh.uv);
+        meshUV.AddRange(uvs);
+        mesh.SetUVs(0, meshUV);
+        Debug.Log("UVs in mesh NOW: " + mesh.uv.Length);
+
+    }
+
+    public static void AddUVs(Mesh mesh, Vector2 uv)
+    {
+        var meshUV = new List<Vector2>(mesh.uv) {uv};
+        mesh.uv = meshUV.ToArray();
     }
 }
