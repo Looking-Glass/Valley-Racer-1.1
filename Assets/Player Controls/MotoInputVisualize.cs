@@ -16,7 +16,7 @@ public class MotoInputVisualize : MonoBehaviour
     void Update()
     {
         input.localPosition = new Vector3(
-            Input.GetAxisRaw("Horizontal") * movementDistance,
+            ValleyInput.GetAxis().x * movementDistance,
             input.localPosition.y,
             input.localPosition.z);
 

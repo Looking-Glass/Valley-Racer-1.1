@@ -2,12 +2,9 @@
 
 public class EventSubscriber : MonoBehaviour
 {
-    EventManager em;
-
     void Start()
     {
-        em = FindObjectOfType<EventManager>();
-        em.playerDeath += PlayerDied;
+        EventManager.playerDeath += PlayerDied;
     }
 
     void PlayerDied()
@@ -19,6 +16,6 @@ public class EventSubscriber : MonoBehaviour
     {
         //Needed because otherwise Garbage Collector will see EM still referencing this
         //And it will never truly be destroyed/recycled
-        em.playerDeath -= PlayerDied;
+        EventManager.playerDeath -= PlayerDied;
     }
 }

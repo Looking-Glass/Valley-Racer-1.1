@@ -9,7 +9,8 @@ public class Explosion : MonoBehaviour
     void Start()
     {
         em = FindObjectOfType<EventManager>();
-        em.playerDeath += Explode;
+        Debug.Log(em + " found by! " + name);
+        EventManager.playerDeath += Explode;
     }
 
     void Update()
@@ -29,6 +30,6 @@ public class Explosion : MonoBehaviour
 
     void OnDestroy()
     {
-        em.playerDeath -= Explode;
+        EventManager.playerDeath -= Explode;
     }
 }

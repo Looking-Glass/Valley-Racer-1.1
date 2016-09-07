@@ -24,7 +24,7 @@ public class MotoController : MonoBehaviour
     GameObject hypercubeHolder;
     Vector3 mountainMovement;
     Vector3 mountainBarMovement;
-    float currentHorizSpeed;
+    MotoInput motoInput;
 
     Vector3 theNormal;
     Vector3 theHit;
@@ -37,28 +37,18 @@ public class MotoController : MonoBehaviour
         hypercubeHolder = GameObject.FindGameObjectWithTag("Hypercube");
         transform.position = new Vector3(hypercubeHolder.transform.position.x, transform.position.y, transform.position.z);
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        motoInput = GetComponent<MotoInput>();
     }
 
     void Update()
     {
-        mountainMovement = new Vector3(); // reset mountain movement
+        //Reset mountain movement
+        mountainMovement = new Vector3();
 
-        //get the horizontal movement/do some things with it, then hold it as a float 0-1 to use
-        //note that i TURNED OFF keyboard input for the horiz axis, b/c i don't like the mushiness.
-        float newHorizInput = Input.GetAxis("Horizontal");
-        if (Input.GetKey(KeyCode.LeftArrow))
-            newHorizInput = -1f;
-        if (Input.GetKey(KeyCode.RightArrow))
-            newHorizInput = 1f;
-
-        float newHorizSpeed = 0f;
-        if (newHorizInput > currentHorizSpeed)
-            newHorizSpeed = currentHorizSpeed + strafeSensitivity * Time.deltaTime;
-        else if (newHorizInput < currentHorizSpeed)
-            newHorizSpeed = currentHorizSpeed - strafeSensitivity * Time.deltaTime;
-
-        if (Mathf.Abs(newHorizInput - currentHorizSpeed) > strafeSensitivity * Time.deltaTime)
-            currentHorizSpeed = newHorizSpeed;
+        //Horizontal speed
+        var currentHorizSpeed = 0f;
+        if (motoInput != null)
+            currentHorizSpeed = motoInput.GetEasedInput();
 
         //cast a ray downward from MotoHolder
         var motoRay = new Ray(transform.position + Vector3.up * 100, -Vector3.up * 200);
@@ -78,7 +68,8 @@ public class MotoController : MonoBehaviour
                 {
                     //Fire death event
                     var em = FindObjectOfType<EventManager>();
-                    em.playerDeath();
+                    Debug.Log(em + " found! by " + name);
+                    EventManager.playerDeath();
 
                     //hypercubeHolder.GetComponent<CameraShake> ().Shake (0.5f, .5f);
                     motoChildHolder.transform.SetParent(null);

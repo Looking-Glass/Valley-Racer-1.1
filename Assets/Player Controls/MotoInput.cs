@@ -3,16 +3,16 @@
 public class MotoInput : MonoBehaviour
 {
     [Range(0.1f, 100f)]
-    public float followSpeed = 1f;
+    public float followSpeed = 15f;
     [Range(0.1f, 100f)]
-    public float easedSpeed = 1f;
+    public float easedSpeed = 15f;
     float followInput;
     float easedFollowInput;
 
     //Note: This script runs first in script execution order.
     void Update()
     {
-        var input = Input.GetAxisRaw("Horizontal");
+        var input = ValleyInput.GetAxis().x;
 
         var followMov = followSpeed * Time.deltaTime;
         followInput = Mathf.MoveTowards(followInput, input, followMov);

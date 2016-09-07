@@ -11,8 +11,7 @@ public class PressEnter : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > timeBuffer)
         {
-            if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.KeypadEnter) ||
-                Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Joystick1Button16))
+            if (ValleyInput.GetEnterButtonDown())
             {
                 var serialManager = GameObject.FindWithTag("SerialManager");
                 if (serialManager != null)

@@ -55,7 +55,7 @@ public class ScoreKeeper : MonoBehaviour
                 InitialsText.text += alphabet[charIndex];
 
             //if you hit enter or a, SOLIDIFY that character choice
-            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Joystick1Button16) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+            if (ValleyInput.GetEnterButtonDown())
             {
                 if (InitialsText.text.Length == 3)
                 {
@@ -69,7 +69,7 @@ public class ScoreKeeper : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetButtonDown("1") || Input.GetButtonDown("17"))
+            if (ValleyInput.GetCancelButtonDown())
             {
                 if (InitialsText.text.Length > 0)
                     InitialsText.text = InitialsText.text.Substring(0, InitialsText.text.Length - 1);

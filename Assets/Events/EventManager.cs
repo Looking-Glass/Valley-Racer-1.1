@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class EventManager : MonoBehaviour
+public class EventManager : ScriptableObject
 {
-    public Action playerDeath;
+    public static Action playerDeath;
 }

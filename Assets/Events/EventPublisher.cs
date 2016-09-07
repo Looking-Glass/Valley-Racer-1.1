@@ -6,10 +6,7 @@ public class EventPublisher : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var em = FindObjectOfType<EventManager>();
-
-            if (em != null && em.playerDeath != null)
-                em.playerDeath();
+            EventManager.playerDeath();
         }
     }
 }
