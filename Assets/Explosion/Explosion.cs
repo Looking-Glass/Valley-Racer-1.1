@@ -4,6 +4,13 @@ public class Explosion : MonoBehaviour
 {
     public KeyCode explodeKey = KeyCode.K;
     public GameObject explosionController;
+    EventManager em;
+
+    void Start()
+    {
+        em = FindObjectOfType<EventManager>();
+        em.playerDeath += Explode;
+    }
 
     void Update()
     {
@@ -18,5 +25,10 @@ public class Explosion : MonoBehaviour
         if (explosionController.activeSelf)
             explosionController.SetActive(false);
         explosionController.SetActive(true);
+    }
+
+    void OnDestroy()
+    {
+        em.playerDeath -= Explode;
     }
 }

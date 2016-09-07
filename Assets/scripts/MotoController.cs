@@ -20,7 +20,6 @@ public class MotoController : MonoBehaviour
     public bool keyboardForwardControls;
     public bool controlHypercube = true;
     public LayerMask layerMask;
-    public GameObject explosion;
     Quaternion tempRot;
     GameObject hypercubeHolder;
     Vector3 mountainMovement;
@@ -77,8 +76,10 @@ public class MotoController : MonoBehaviour
                 //explode him if he hits a peak head on
                 if (motoRayHit.normal.z < hitRadius)
                 {
-                    //DEATH
-                    explosion.GetComponent<ExplosionOld>().Explode();
+                    //Fire death event
+                    var em = FindObjectOfType<EventManager>();
+                    em.playerDeath();
+
                     //hypercubeHolder.GetComponent<CameraShake> ().Shake (0.5f, .5f);
                     motoChildHolder.transform.SetParent(null);
                     while (motoChildHolder.transform.childCount > 0)
