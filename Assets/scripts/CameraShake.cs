@@ -2,42 +2,31 @@
 
 public class CameraShake : MonoBehaviour
 {
-    float totalTime;
-    float timer;
-    float strength;
+    public float duration;
     Vector3 heldPosition;
-    public Transform target;
+    public float startingStrength;
+    float strength;
+    float timer;
+
+    void OnEnable()
+    {
+        timer = 0;
+        heldPosition = transform.position;
+    }
 
     void Update()
     {
-        if (timer > 0)
-        {
-            var x1 = Random.Range(-strength, strength);
-            var y1 = Random.Range(-strength, strength);
-            var z1 = Random.Range(-strength, strength);
+        if (timer > duration)
+            enabled = false;
 
-            if (target != null)
-                target.position = heldPosition + new Vector3(x1, y1, z1);
+        timer += Time.deltaTime;
 
-            timer -= Time.deltaTime;
-            strength = Mathf.Lerp(0f, strength, timer / totalTime);
-        }
-    }
+        var x1 = Random.Range(-strength, strength);
+        var y1 = Random.Range(-strength, strength);
+        var z1 = Random.Range(-strength, strength);
 
+        transform.position = heldPosition + new Vector3(x1, y1, z1);
 
-    /// <summary>
-    /// Attach to a gameobject (not necessarily the one that you want to shake), call this function and give it a time, strength, and a target.
-    /// </summary>
-    /// <param name="t"></param>
-    /// <param name="str"></param>
-    /// <param name="target"></param>
-    public void Shake(float t, float str, Transform target)
-    {
-        totalTime = t;
-        timer = t;
-        strength = str;
-        this.target = target;
-        if (target != null)
-            heldPosition = target.position;
+        strength = Mathf.Lerp(startingStrength, 0f, timer / (duration != 0 ? duration : 1f));
     }
 }

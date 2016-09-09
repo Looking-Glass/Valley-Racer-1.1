@@ -11,8 +11,6 @@ public class MotoController : MonoBehaviour
     public float turnTilt = 36f;
     public float rotationJerkinessDamp = 0.2f;
     public float slopeGravity = 4f;
-    //isn't throwing an error but i might not need it. (legacy?)
-    //public float levelSizeBoundaries = 8f;
     public int numberToAverageNormal = 4;
     public float averageRadius = 0.66f;
     [Range(-1f, 0f)]
@@ -67,33 +65,10 @@ public class MotoController : MonoBehaviour
                 if (motoRayHit.normal.z < hitRadius)
                 {
                     //Fire death event
-                    var em = FindObjectOfType<EventManager>();
-                    Debug.Log(em + " found! by " + name);
                     EventManager.playerDeath();
 
-                    //hypercubeHolder.GetComponent<CameraShake> ().Shake (0.5f, .5f);
-                    motoChildHolder.transform.SetParent(null);
-                    while (motoChildHolder.transform.childCount > 0)
-                    {
-                        var holderBaby = motoChildHolder.transform.GetChild(0);
-                        holderBaby.SetParent(null); //remove all the children so they can be freee.
-                        holderBaby.localScale = new Vector3(holderBaby.localScale.x, holderBaby.localScale.x, holderBaby.localScale.x);
-                        holderBaby.gameObject.AddComponent<Rigidbody>();
-                        holderBaby.gameObject.AddComponent<BoxCollider>();
-                        holderBaby.gameObject.layer = 0;
-                        if (holderBaby.childCount > 0)
-                        {
-                            for (var i = 0; i < holderBaby.childCount; i++)
-                            {
-                                holderBaby.GetChild(i).gameObject.layer = 0;
-                            }
-                        }
-                    }
-                    gameObject.SetActive(false);
-                    hypercubeHolder.GetComponent<ScaleBackCameraOnDeath>().ScaleBack();
-
-                    //start the timer which will trigger the player death part.
-                    scoreKeeper.OnPlayerDeath();
+                    //turn off this component. no more.
+                    enabled = false;
                 }
                 else
                 {

@@ -22,6 +22,11 @@ public class ScoreKeeper : MonoBehaviour
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?_<>";
     int charIndex;
 
+    void Start()
+    {
+        EventManager.playerDeath += OnPlayerDeath;
+    }
+
     void OnEnable()
     {
         if (PlayerPrefs.HasKey("HiScore"))
@@ -131,16 +136,16 @@ public class ScoreKeeper : MonoBehaviour
 
     void CheckUpDown()
     {
-        var vert = Input.GetAxisRaw("Vertical");
-        if (Mathf.Abs(vert) > 0.1)
+        var vert = ValleyInput.GetAxis().y;
+        if (Mathf.Abs(vert) > 0.3)
         {
-            if (vert > 0.1f && keyUpDown != KeyUpDown.up)
+            if (vert > 0.3f && keyUpDown != KeyUpDown.up)
             {
                 FireChar(-1);
                 keyUpDown = KeyUpDown.up;
             }
 
-            if (vert < -0.1f && keyUpDown != KeyUpDown.down)
+            if (vert < -0.3f && keyUpDown != KeyUpDown.down)
             {
                 FireChar(1);
                 keyUpDown = KeyUpDown.down;
@@ -201,6 +206,11 @@ public class ScoreKeeper : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         bestDistance = 0;
+    }
+
+    void OnDestroy()
+    {
+        EventManager.playerDeath -= OnPlayerDeath;
     }
     
 }
