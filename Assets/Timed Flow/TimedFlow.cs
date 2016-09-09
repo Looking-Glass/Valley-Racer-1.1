@@ -7,7 +7,6 @@ public class TimedFlow : MonoBehaviour
     public virtual void OnContinueAct() { }
     public virtual void OnEndAct() { }
     public float duration;
-    float timeSinceStart;
     float timeStarted;
 
     public void DoAct()
@@ -22,8 +21,7 @@ public class TimedFlow : MonoBehaviour
 
     void Act(float dur)
     {
-        timeSinceStart = 0;
-        timeStarted = Time.time; //-dt makes it more accurate don't ask me why
+        timeStarted = Time.time;
         var toStop = StartCoroutine(ContinuedAct());
         StartCoroutine(ContinuedActTimer(toStop, dur));
     }
@@ -33,16 +31,15 @@ public class TimedFlow : MonoBehaviour
         OnBeginAct();
         while (true)
         {
-            timeSinceStart = Time.time - timeStarted;
             yield return new WaitForEndOfFrame();
             OnContinueAct();
         }
     }
 
-    IEnumerator ContinuedActTimer(Coroutine toStop, float duration)
+    IEnumerator ContinuedActTimer(Coroutine toStop, float dur)
     {
-        yield return new WaitForSeconds(duration);
-        timeSinceStart = duration;
+        yield return new WaitForSeconds(dur);
+        timeStarted = Time.time - dur;
         StopCoroutine(toStop);
         OnContinueAct();
         OnEndAct();
@@ -55,7 +52,7 @@ public class TimedFlow : MonoBehaviour
     /// <returns>Time in seconds (dependent on timescale)</returns>
     public float GetTimeSinceStart()
     {
-        var timeSince = timeSinceStart;
+        var timeSince = Time.time - timeStarted;
         if (Mathf.Approximately(timeSince, duration))
             timeSince = duration;
         return timeSince;
@@ -69,7 +66,7 @@ public class TimedFlow : MonoBehaviour
     /// <returns>Time since the flow started, normalized between 0-1</returns>
     public float GetTimeNormalized(float curveExponent = 1)
     {
-        var timeSince = timeSinceStart;
+        var timeSince = Time.time - timeStarted;
 
         if (Mathf.Approximately(timeSince, duration))
             timeSince = duration;

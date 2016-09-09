@@ -57,11 +57,12 @@ public class CrashInitFlow : TimedFlow
 
         //Set original values for things
         originHypercubeZRot = hypercubeTransform.localEulerAngles.z;
-        originHypercubeZRot = hypercubeTransform.localEulerAngles.x;
+        originHypercubeXRot = hypercubeTransform.localEulerAngles.x;
         originMotoChildZScale = motoChildTransform.localScale.z;
         originTubeFactor = hypercubeCamera.tubeFactor;
         originPerspectiveFactor = hypercubeCamera.perspectiveFactor;
         originHypercubeScale = hypercubeTransform.localScale;
+        originHypercubePosition = hypercubeTransform.position;
     }
 
     public override void OnContinueAct()
@@ -74,19 +75,19 @@ public class CrashInitFlow : TimedFlow
             (hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 0f, lerp));
 
         //Rotate hypercube a bit to have a better view
-        hypercubeTransform.localEulerAngles = VectorEdit.SetX
-            (hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 30f, lerp));
+        //hypercubeTransform.localEulerAngles = VectorEdit.SetX(hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 30f, lerp));
 
         //make moto child holder return to 1, 1, 1 scale
-        motoChildTransform.localScale = VectorEdit.SetZ(motoChildTransform.localScale,
-            Mathf.Lerp(originMotoChildZScale, 1f, lerp));
+        //motoChildTransform.localScale = VectorEdit.SetZ(motoChildTransform.localScale, Mathf.Lerp(originMotoChildZScale, 1f, lerp));
 
         //make camera move to player's position
+        /*
         hypercubeTransform.position = new Vector3(
             Mathf.Lerp(originHypercubePosition.x, motoChildTransform.position.x, lerp),
             Mathf.Lerp(originHypercubePosition.y, motoChildTransform.position.y, lerp),
             Mathf.Lerp(originHypercubePosition.z, motoChildTransform.position.z, lerp)
             );
+            */
 
         //Rotate the player's bike by a bit and push it up
         motoChildTransform.Rotate(Vector3.right, Time.deltaTime * 30f, Space.World);
@@ -95,11 +96,11 @@ public class CrashInitFlow : TimedFlow
         motoChildTransform.Translate(new Vector3(0, 0.1f, -0.5f) * Time.deltaTime * 1f);
 
         //Set perspective and tubefactors lower
-        hypercubeCamera.tubeFactor = Mathf.Lerp(originTubeFactor, 0f, lerp);
-        hypercubeCamera.perspectiveFactor = Mathf.Lerp(originPerspectiveFactor, 0f, lerp);
+        //hypercubeCamera.tubeFactor = Mathf.Lerp(originTubeFactor, 0f, lerp);
+        //hypercubeCamera.perspectiveFactor = Mathf.Lerp(originPerspectiveFactor, 0f, lerp);
 
         //Make the hypercube a little bigger
-        hypercubeTransform.localScale = Vector3.Lerp(originHypercubeScale, originHypercubeScale * 2.5f, lerp);
+        //hypercubeTransform.localScale = Vector3.Lerp(originHypercubeScale, originHypercubeScale * 2.5f, lerp);
     }
 
     public override void OnEndAct()
