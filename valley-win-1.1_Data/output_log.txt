@@ -14,14 +14,20 @@ Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\vall
 Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.049 seconds
+- Completed reload, in  0.053 seconds
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
+<RI.Hid> Failed to create device file:
+ 2 The system cannot find the file specified.
+
+ 
+(Filename:  Line: 54)
+
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.946771 ms
+UnloadTime: 0.984317 ms
 Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
   at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
   at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
@@ -37,56 +43,22 @@ Connection attempt failed or disconnection detected
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 21ac -> priority: 1 
+  Thread -> id: 434c -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 UnloadTime: 0.343892 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1342.
-Total: 0.284159 ms (FindLiveObjects: 0.084053 ms CreateObjectMapping: 0.015359 ms MarkObjects: 0.180052 ms  DeleteObjects: 0.003839 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1353.
+Total: 0.302506 ms (FindLiveObjects: 0.090026 ms CreateObjectMapping: 0.016213 ms MarkObjects: 0.191146 ms  DeleteObjects: 0.004693 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 0.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.840958 ms
+UnloadTime: 4.414710 ms
 
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62628.
-Total: 10.139711 ms (FindLiveObjects: 2.836473 ms CreateObjectMapping: 0.595625 ms MarkObjects: 5.293215 ms  DeleteObjects: 1.413543 ms)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 20.373714 ms
-
-Unloading 244 unused Assets to reduce memory usage. Loaded Objects now: 551.
-Total: 0.940371 ms (FindLiveObjects: 0.032426 ms CreateObjectMapping: 0.034559 ms MarkObjects: 0.189012 ms  DeleteObjects: 0.683945 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.530772 ms
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1345.
-Total: 0.346879 ms (FindLiveObjects: 0.085333 ms CreateObjectMapping: 0.017919 ms MarkObjects: 0.230399 ms  DeleteObjects: 0.012799 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.811944 ms
-
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62631.
-Total: 10.268564 ms (FindLiveObjects: 2.663674 ms CreateObjectMapping: 0.284159 ms MarkObjects: 5.462601 ms  DeleteObjects: 1.857276 ms)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62652.
+Total: 15.916338 ms (FindLiveObjects: 3.324152 ms CreateObjectMapping: 0.917758 ms MarkObjects: 9.620032 ms  DeleteObjects: 2.054395 ms)
 
 printed 1 ticket(s)
  
@@ -109,38 +81,18 @@ printed 1 ticket(s)
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 17.441240 ms
+UnloadTime: 21.154514 ms
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Unloading 252 unused Assets to reduce memory usage. Loaded Objects now: 551.
-Total: 0.997117 ms (FindLiveObjects: 0.046933 ms CreateObjectMapping: 0.015786 ms MarkObjects: 0.186879 ms  DeleteObjects: 0.747091 ms)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.510292 ms
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1345.
-Total: 0.351145 ms (FindLiveObjects: 0.082773 ms CreateObjectMapping: 0.033279 ms MarkObjects: 0.222719 ms  DeleteObjects: 0.011946 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.889598 ms
-
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62631.
-Total: 11.075389 ms (FindLiveObjects: 2.818127 ms CreateObjectMapping: 0.424532 ms MarkObjects: 5.801800 ms  DeleteObjects: 2.030502 ms)
-
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 17.170311 ms
-
-Unloading 245 unused Assets to reduce memory usage. Loaded Objects now: 551.
-Total: 0.853331 ms (FindLiveObjects: 0.049493 ms CreateObjectMapping: 0.016639 ms MarkObjects: 0.193706 ms  DeleteObjects: 0.592638 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.467199 ms
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1345.
-Total: 0.378025 ms (FindLiveObjects: 0.101119 ms CreateObjectMapping: 0.018773 ms MarkObjects: 0.244906 ms  DeleteObjects: 0.012799 ms)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.888318 ms
-
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62631.
-Total: 10.560404 ms (FindLiveObjects: 2.796367 ms CreateObjectMapping: 0.287572 ms MarkObjects: 5.435721 ms  DeleteObjects: 2.039888 ms)
+Unloading 238 unused Assets to reduce memory usage. Loaded Objects now: 571.
+Total: 2.949967 ms (FindLiveObjects: 0.080639 ms CreateObjectMapping: 0.025599 ms MarkObjects: 0.253439 ms  DeleteObjects: 2.589434 ms)
 

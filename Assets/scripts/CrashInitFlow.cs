@@ -47,14 +47,6 @@ public class CrashInitFlow : TimedFlow
         //Trigger crash sound
         bikeHit.Play();
 
-        //Start constant camera rotator
-        cameraRotator.enabled = true;
-
-        //Choose a random spin direction for camera
-        cameraRotator.degreesPerSecond = Random.value > 0.6f //not a typo
-            ? Mathf.Abs(cameraRotator.degreesPerSecond)
-            : -Mathf.Abs(cameraRotator.degreesPerSecond);
-
         //Set original values for things
         originHypercubeZRot = hypercubeTransform.localEulerAngles.z;
         originHypercubeXRot = hypercubeTransform.localEulerAngles.x;
@@ -68,26 +60,26 @@ public class CrashInitFlow : TimedFlow
     public override void OnContinueAct()
     {
         //The lerp:
-        var lerp = GetTimeNormalized(0.2f);
+        var lerp = GetTimeNormalized(0.1f);
 
         //return hypercube to 0 deg rotation on z
         hypercubeTransform.localEulerAngles = VectorEdit.SetZ
             (hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 0f, lerp));
 
         //Rotate hypercube a bit to have a better view
-        //hypercubeTransform.localEulerAngles = VectorEdit.SetX(hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 30f, lerp));
+        hypercubeTransform.localEulerAngles = VectorEdit.SetX(hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 15f, lerp));
 
         //make moto child holder return to 1, 1, 1 scale
-        //motoChildTransform.localScale = VectorEdit.SetZ(motoChildTransform.localScale, Mathf.Lerp(originMotoChildZScale, 1f, lerp));
+        motoChildTransform.localScale = VectorEdit.SetZ(motoChildTransform.localScale, Mathf.Lerp(originMotoChildZScale, 1f, lerp));
 
         //make camera move to player's position
-        /*
+        
         hypercubeTransform.position = new Vector3(
             Mathf.Lerp(originHypercubePosition.x, motoChildTransform.position.x, lerp),
             Mathf.Lerp(originHypercubePosition.y, motoChildTransform.position.y, lerp),
             Mathf.Lerp(originHypercubePosition.z, motoChildTransform.position.z, lerp)
             );
-            */
+        
 
         //Rotate the player's bike by a bit and push it up
         motoChildTransform.Rotate(Vector3.right, Time.deltaTime * 30f, Space.World);
@@ -96,11 +88,11 @@ public class CrashInitFlow : TimedFlow
         motoChildTransform.Translate(new Vector3(0, 0.1f, -0.5f) * Time.deltaTime * 1f);
 
         //Set perspective and tubefactors lower
-        //hypercubeCamera.tubeFactor = Mathf.Lerp(originTubeFactor, 0f, lerp);
-        //hypercubeCamera.perspectiveFactor = Mathf.Lerp(originPerspectiveFactor, 0f, lerp);
+        hypercubeCamera.tubeFactor = Mathf.Lerp(originTubeFactor, 0f, lerp);
+        hypercubeCamera.perspectiveFactor = Mathf.Lerp(originPerspectiveFactor, 0f, lerp);
 
         //Make the hypercube a little bigger
-        //hypercubeTransform.localScale = Vector3.Lerp(originHypercubeScale, originHypercubeScale * 2.5f, lerp);
+        hypercubeTransform.localScale = Vector3.Lerp(originHypercubeScale, originHypercubeScale * 2.5f, lerp);
     }
 
     public override void OnEndAct()
