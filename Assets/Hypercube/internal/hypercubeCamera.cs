@@ -3,10 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-
+  
     [ExecuteInEditMode]
     public class hypercubeCamera : MonoBehaviour
     {
+    //kyle's perspective values
+    public float perspectiveFactor = 0.4f;
+    public float tubeFactor = 0.7f;
+    float[] perspectiveCameraSizes;
+
+
+    public const float version = 1.1f;
+
         public enum softSliceMode
         {
             HARD = 0,
@@ -43,19 +51,12 @@ using System.Collections.Generic;
         public RenderTexture[] sliceTextures;
         public hypercube.castMesh castMeshPrefab;
         public hypercube.castMesh localCastMesh = null;
-
-        
        
         //store our camera values here.
         float[] nearValues;
         float[] farValues;
 
-        //kyle's perspective values
-        public float perspectiveFactor = 0.4f;
-        public float tubeFactor = 0.7f;
-        float[] perspectiveCameraSizes;
-
-    void Start()
+        void Start()
         {
             if (!localCastMesh)
             {
@@ -170,9 +171,9 @@ using System.Collections.Generic;
                 renderCam.nearClipPlane = nearValues[i];
                 renderCam.farClipPlane = farValues[i];
                 renderCam.targetTexture = sliceTextures[i];
-                //kyle code!!! V that 1 line down there V
-			    renderCam.orthographicSize = perspectiveCameraSizes[i];
-                renderCam.Render();
+            //kyle code!!! V that 1 line down there V
+            renderCam.orthographicSize = perspectiveCameraSizes[i];
+            renderCam.Render();
             }
 
             renderCam.fieldOfView = baseViewAngle;
@@ -209,23 +210,23 @@ using System.Collections.Generic;
 
             nearValues = new float[localCastMesh.getSliceCount()];
             farValues = new float[localCastMesh.getSliceCount()];
-            perspectiveCameraSizes = new float[localCastMesh.getSliceCount()];
+        perspectiveCameraSizes = new float[localCastMesh.getSliceCount()];
 
-            float sliceDepth = transform.lossyScale.z / (float)localCastMesh.getSliceCount();
+        float sliceDepth = transform.lossyScale.z / (float)localCastMesh.getSliceCount();
 
             renderCam.aspect = transform.lossyScale.x / transform.lossyScale.y;
             renderCam.orthographicSize = .5f * transform.lossyScale.y;
 
             for (int i = 0; i < localCastMesh.getSliceCount() && i < sliceTextures.Length; i++)
             {
-                var newSliceDepth = i * sliceDepth * (i * perspectiveFactor + 1) - overlap;
-                var farSliceDepth = (i + 1) * sliceDepth * ((i + 1) * perspectiveFactor + 1) + overlap;
-                float newCameraSize = renderCam.orthographicSize * (i * (perspectiveFactor * tubeFactor) + 1);
+            var newSliceDepth = i * sliceDepth * (i * perspectiveFactor + 1) - overlap;
+            var farSliceDepth = (i + 1) * sliceDepth * ((i + 1) * perspectiveFactor + 1) + overlap;
+            float newCameraSize = renderCam.orthographicSize * (i * (perspectiveFactor * tubeFactor) + 1);
 
-                nearValues[i] = newSliceDepth;
-                farValues[i] = farSliceDepth;
-                perspectiveCameraSizes[i] = newCameraSize;
-            }
+            nearValues[i] = newSliceDepth;
+            farValues[i] = farSliceDepth;
+            perspectiveCameraSizes[i] = newCameraSize;
+        }
 
 
             updateOverlap();

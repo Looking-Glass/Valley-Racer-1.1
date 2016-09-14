@@ -21,7 +21,7 @@ public class SettingChanges : MonoBehaviour
     {
         float modDistance = scoreKeeper.CurrentScore % settingInterval;
         if (modDistance < prevMod)
-            index++;
+            index = SafeAdd(index, skyColors.Length);
         prevMod = modDistance;
 
         Color finalSkyColor = skyColors[index];
@@ -30,9 +30,9 @@ public class SettingChanges : MonoBehaviour
         if (modDistance > settingInterval * 0.8f)
         {
             finalSkyColor = Color.Lerp
-                (skyColors[index], skyColors[index + 1], (modDistance - 0.8f * settingInterval) / (0.2f * settingInterval));
+                (skyColors[index], skyColors[SafeAdd(index, skyColors.Length)], (modDistance - 0.8f * settingInterval) / (0.2f * settingInterval));
             finalMtnColor = Color.Lerp
-                (mountainColors[index], mountainColors[index + 1], (modDistance - 0.8f * settingInterval) / (0.2f * settingInterval));
+                (mountainColors[index], mountainColors[SafeAdd(index, mountainColors.Length)], (modDistance - 0.8f * settingInterval) / (0.2f * settingInterval));
         }
 
         skyRenderer.color = finalSkyColor;
@@ -43,5 +43,11 @@ public class SettingChanges : MonoBehaviour
         {
             mtnList[i].GetComponent<Renderer>().material.color = finalMtnColor;
         }
+    }
+
+    int SafeAdd(int num, int max)
+    {
+        var i = num + 1 >= max ? 0 : num + 1;
+        return i;
     }
 }

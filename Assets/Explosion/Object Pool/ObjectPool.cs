@@ -7,6 +7,7 @@ public class ObjectPool : MonoBehaviour
     public List<GameObject> pool;
     public int minimumPool = 50;
     public int maximumPool = 100;
+    public bool startPoolEnabled;
     int index;
 
     void Awake()
@@ -22,8 +23,9 @@ public class ObjectPool : MonoBehaviour
 
     void AddOneToPool()
     {
-        var obj = (GameObject) Instantiate(poolObject, transform, true);
-        obj.SetActive(false);
+        var obj = (GameObject)Instantiate(poolObject, transform, true);
+        if (!startPoolEnabled)
+            obj.SetActive(false);
         pool.Add(obj);
     }
 

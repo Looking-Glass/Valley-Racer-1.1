@@ -22,6 +22,7 @@ public class MotoController : MonoBehaviour
     GameObject hypercubeHolder;
     Vector3 mountainMovement;
     Vector3 mountainBarMovement;
+    Vector3 gettableVelocity;
     MotoInput motoInput;
 
     Vector3 theNormal;
@@ -172,6 +173,13 @@ public class MotoController : MonoBehaviour
         //also add the distance travelled to score.
         if (scoreKeeper != null)
             scoreKeeper.AddToScore(mountainBarMovement.z);
+
+        gettableVelocity = new Vector3(mountainMovement.x, mountainBarMovement.y, mountainBarMovement.z);
+    }
+
+    public Vector3 GetVelocity()
+    {
+        return gettableVelocity;
     }
 
     void OnDrawGizmos()
