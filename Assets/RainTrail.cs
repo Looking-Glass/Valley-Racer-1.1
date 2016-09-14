@@ -10,28 +10,32 @@ public class RainTrail : MonoBehaviour
     Bounds rainBounds;
     public float fallSpeed = 10f;
     public MotoController motoController;
+    SpriteRenderer sr;
 
     void Start()
     {
         rainBounds = new Bounds(rainBoundsTransform.position, rainBoundsTransform.lossyScale);
-        Spawn(false);
+        sr = GetComponent<SpriteRenderer>();
+        StartCoroutine(Spawn(false));
         //StartCoroutine(PutDrop());
-    }
-
-    void Spawn(bool respawn = true)
-    {
-        transform.position = new Vector3(
-            Random.Range(rainBounds.min.x, rainBounds.max.x),
-            respawn ? rainBounds.max.y : Random.Range(rainBounds.min.y, rainBounds.max.y),
-            Random.Range(rainBounds.min.z, rainBounds.max.z)
-            );
     }
 
     void Update()
     {
-        transform.Translate(/* Vector3.down * fallSpeed * Time.deltaTime + */ motoController.GetVelocity());
+        var vel = Vector3.down * fallSpeed * Time.deltaTime;
+        if (motoController.enabled)
+            vel += motoController.GetVelocity();
+
+        transform.Translate(vel, Space.World);
+
+        transform.LookAt(transform.position + vel, Vector3.up);
+        transform.Rotate(new Vector3(90, 0, 90));
+
         if (transform.position.y < rainBounds.min.y)
-            Spawn();
+        {
+            sr.enabled = false;
+            StartCoroutine(Spawn());
+        }
 
         //Left and right repeating
         if (transform.position.x > rainBounds.max.x)
@@ -42,6 +46,17 @@ public class RainTrail : MonoBehaviour
         //Forward repeating
         if (transform.position.z < rainBounds.min.z)
             transform.Translate(Vector3.forward * rainBounds.size.z);
+    }
+
+    IEnumerator Spawn(bool respawn = true)
+    {
+        yield return new WaitForSeconds(Random.value * 5f);
+        sr.enabled = true;
+        transform.position = new Vector3(
+            Random.Range(rainBounds.min.x, rainBounds.max.x),
+            respawn ? rainBounds.max.y : Random.Range(rainBounds.min.y, rainBounds.max.y),
+            Random.Range(rainBounds.min.z, rainBounds.max.z)
+            );
     }
 
     IEnumerator PutDrop()

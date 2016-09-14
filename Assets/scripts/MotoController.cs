@@ -18,6 +18,8 @@ public class MotoController : MonoBehaviour
     public bool keyboardForwardControls;
     public bool controlHypercube = true;
     public LayerMask layerMask;
+    public Transform torso;
+    public Transform head;
     Quaternion tempRot;
     GameObject hypercubeHolder;
     Vector3 mountainMovement;
@@ -149,6 +151,10 @@ public class MotoController : MonoBehaviour
                 hypercubeHolder.transform.localEulerAngles.y,
                 -currentHorizSpeed * (turnTilt / 3)
             );
+
+            //Make the body and head counter-tilt a little to look like a real turn
+            torso.localEulerAngles = Vector3.down * currentHorizSpeed * turnTilt / 10f;
+            head.localEulerAngles = Vector3.down * currentHorizSpeed * turnTilt / 6f;
         }
 
         //take all the little mountain squares and move them horizontally
