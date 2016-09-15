@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class SpriteBlink : MonoBehaviour
 {
@@ -10,18 +11,15 @@ public class SpriteBlink : MonoBehaviour
     {
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
+        StartCoroutine(ToggleBlink());
     }
 
-    void Update()
+    IEnumerator ToggleBlink()
     {
-        if (sr == null)
-            return;
-
-        timer += Time.deltaTime;
-        if (timer > blinkInterval)
+        while (enabled)
         {
             sr.enabled = !sr.enabled;
-            timer = 0;
+            yield return new WaitForSeconds(blinkInterval);
         }
     }
 }

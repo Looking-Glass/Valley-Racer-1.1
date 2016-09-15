@@ -7,9 +7,11 @@ public class PressEnter : MonoBehaviour
     public float timeBuffer = 2f;
     float timer;
     AsyncOperation async;
+    public SpriteBlink spriteBlink;
 
     void Start()
     {
+        spriteBlink = GetComponent<SpriteBlink>();
         StartCoroutine(load());
     }
 
@@ -31,19 +33,21 @@ public class PressEnter : MonoBehaviour
                         var asource = sm.GetComponent<AudioSource>();
                         asource.clip = ac;
                         asource.Play();
-                        BlinkTextConfirm();
+                        StartCoroutine(Confirm());
                     }
                 }
                 else
                 {
-                    BlinkTextConfirm();
+                    StartCoroutine(Confirm());
                 }
             }
         }
     }
 
-    void BlinkTextConfirm()
+    IEnumerator Confirm()
     {
+        spriteBlink.blinkInterval = 0.01f;
+        yield return new WaitForSeconds(1.5f);
         if (EventManager.gameStart != null)
             EventManager.gameStart();
         async.allowSceneActivation = true;
@@ -57,10 +61,5 @@ public class PressEnter : MonoBehaviour
         async.allowSceneActivation = false;
         yield return async;
         Debug.Log("Level done loading " + Time.time);
-    }
-
-    public void ActivateScene()
-    {
-        async.allowSceneActivation = true;
     }
 }

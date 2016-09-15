@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MotoController : MonoBehaviour
 {
@@ -20,6 +19,7 @@ public class MotoController : MonoBehaviour
     public LayerMask layerMask;
     public Transform torso;
     public Transform head;
+    public Transform tire;
     Quaternion tempRot;
     GameObject hypercubeHolder;
     Vector3 mountainMovement;
@@ -134,7 +134,7 @@ public class MotoController : MonoBehaviour
         //input
 
         //horizontal input
-        if (Math.Abs(currentHorizSpeed) > 0.001f)
+        if (Mathf.Abs(currentHorizSpeed) > 0.001f)
         {
             mountainMovement -= Vector3.right * currentHorizSpeed * Time.deltaTime * strafeSpeed;
         }
@@ -153,8 +153,11 @@ public class MotoController : MonoBehaviour
             );
 
             //Make the body and head counter-tilt a little to look like a real turn
-            torso.localEulerAngles = Vector3.down * currentHorizSpeed * turnTilt / 10f;
-            head.localEulerAngles = Vector3.down * currentHorizSpeed * turnTilt / 6f;
+            if (torso != null && head != null)
+            {
+                torso.localEulerAngles = Vector3.down * currentHorizSpeed * turnTilt / 10f;
+                head.localEulerAngles = Vector3.down * currentHorizSpeed * turnTilt / 6f;
+            }
         }
 
         //take all the little mountain squares and move them horizontally
@@ -179,6 +182,10 @@ public class MotoController : MonoBehaviour
         //also add the distance travelled to score.
         if (scoreKeeper != null)
             scoreKeeper.AddToScore(mountainBarMovement.z);
+
+        //Make the tire bump around
+        if (tire != null)
+            tire.transform.localPosition = Vector3.up * Random.value * 0.1f;
 
         gettableVelocity = new Vector3(mountainMovement.x, mountainBarMovement.y, mountainBarMovement.z);
     }

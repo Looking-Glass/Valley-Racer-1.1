@@ -73,8 +73,8 @@ public class ValleyInput : ScriptableObject
         if (!cancel)
             cancel = Input.GetKeyDown("joystick button 1");
 #elif UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
-        if (!enter)
-            enter = Input.GetKeyDown("joystick button 17");
+        if (!cancel)
+            cancel = Input.GetKeyDown("joystick button 17");
 #endif
         return cancel;
     }

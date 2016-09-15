@@ -57,6 +57,11 @@ public class ValleySerialPolling : MonoBehaviour
 		if (SceneManager.GetActiveScene().buildIndex == 1)
 		{
 			var blinkyText = GameObject.FindWithTag("BlinkyText");
+
+            //never run out of credits
+		    if (credits <= 0)
+		        credits = 1;
+
 			if (credits > 0)
 			{
 				blinkyText.GetComponent<SpriteRenderer>().sprite = pressASprite;
