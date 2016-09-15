@@ -31,6 +31,9 @@ public class ObjectPool : MonoBehaviour
 
     public GameObject ActivateObject()
     {
+        if (pool.Count == 0)
+            return null;
+
         var obj = pool[index];
         obj.SetActive(false); //so if it was already active, it doesn't miss OnEnable()
         obj.SetActive(true);
