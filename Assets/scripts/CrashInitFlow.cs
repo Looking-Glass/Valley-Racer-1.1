@@ -15,7 +15,7 @@ public class CrashInitFlow : TimedFlow
      * 2. does explosion
      * 3. plays explosion sound
      */
-     
+
     public AudioSource bikeHit;
     public SpinDegPerSecond cameraRotator;
     //float timer;
@@ -63,23 +63,22 @@ public class CrashInitFlow : TimedFlow
         var lerp = GetTimeNormalized(0.1f);
 
         //return hypercube to 0 deg rotation on z
-        hypercubeTransform.localEulerAngles = VectorEdit.SetZ
-            (hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 0f, lerp));
+        hypercubeTransform.localEulerAngles = hypercubeTransform.localEulerAngles.SetZ(Mathf.LerpAngle(originHypercubeZRot, 0f, lerp));
 
         //Rotate hypercube a bit to have a better view
-        hypercubeTransform.localEulerAngles = VectorEdit.SetX(hypercubeTransform.localEulerAngles, Mathf.LerpAngle(originHypercubeZRot, 15f, lerp));
+        hypercubeTransform.localEulerAngles = hypercubeTransform.localEulerAngles.SetX(Mathf.LerpAngle(originHypercubeZRot, 15f, lerp));
 
         //make moto child holder return to 1, 1, 1 scale
-        motoChildTransform.localScale = VectorEdit.SetZ(motoChildTransform.localScale, Mathf.Lerp(originMotoChildZScale, 1f, lerp));
+        motoChildTransform.localScale = motoChildTransform.localScale.SetZ(Mathf.Lerp(originMotoChildZScale, 1f, lerp));
 
         //make camera move to player's position
-        
+
         hypercubeTransform.position = new Vector3(
             Mathf.Lerp(originHypercubePosition.x, motoChildTransform.position.x, lerp),
             Mathf.Lerp(originHypercubePosition.y, motoChildTransform.position.y, lerp),
             Mathf.Lerp(originHypercubePosition.z, motoChildTransform.position.z, lerp)
             );
-        
+
 
         //Rotate the player's bike by a bit and push it up
         motoChildTransform.Rotate(Vector3.right, Time.deltaTime * 30f, Space.World);

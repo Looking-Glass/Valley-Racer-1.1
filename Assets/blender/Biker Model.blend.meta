@@ -15,6 +15,9 @@ ModelImporter:
     100014: Armature
     100016: Biker
     100018: Head
+    100020: b_Head
+    100022: b_Main
+    100024: b_Torso
     400000: Bike
     400002: //RootNode
     400004: Helmet
@@ -25,6 +28,9 @@ ModelImporter:
     400014: Armature
     400016: Biker
     400018: Head
+    400020: b_Head
+    400022: b_Main
+    400024: b_Torso
     2300000: Bike
     2300002: Helmet
     2300004: Legs

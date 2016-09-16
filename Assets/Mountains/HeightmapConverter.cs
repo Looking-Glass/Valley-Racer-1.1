@@ -36,10 +36,12 @@ public class HeightmapConverter : MonoBehaviour
     void Update()
     {
         //Movement for testing
+        /*
         if (ValleyInput.GetAxis().sqrMagnitude > 0f)
         {
             transform.Translate(new Vector3(ValleyInput.GetAxis().x, 0, ValleyInput.GetAxis().y) * Time.deltaTime * 2f);
         }
+        */
 
         //Watch Movement each frame
         WatchMovement();
@@ -47,20 +49,18 @@ public class HeightmapConverter : MonoBehaviour
 
     void WatchMovement()
     {
-        if (Mathf.Abs(transform.position.x) > 1f || Mathf.Abs(transform.position.z) > 1f)
+        if (Mathf.Abs(transform.localPosition.x) > 1f || Mathf.Abs(transform.localPosition.z) > 1f)
         {
-            if (Mathf.Abs(transform.position.x) > 1f)
+            if (Mathf.Abs(transform.localPosition.x) > 1f)
             {
-                coords = VectorEdit.SetX(coords, coords.x - Mathf.Sign(transform.position.x));
-                transform.position = VectorEdit.SetX(transform.position,
-                    transform.position.x - Mathf.Sign(transform.position.x));
+                coords = coords.SetX(coords.x - Mathf.Sign(transform.localPosition.x));
+                transform.localPosition = transform.localPosition.SetX(transform.localPosition.x - Mathf.Sign(transform.localPosition.x));
             }
 
-            if (Mathf.Abs(transform.position.z) > 1f)
+            if (Mathf.Abs(transform.localPosition.z) > 1f)
             {
-                coords = VectorEdit.SetY(coords, coords.y - Mathf.Sign(transform.position.z));
-                transform.position = VectorEdit.SetZ(transform.position,
-                    transform.position.z - Mathf.Sign(transform.position.z));
+                coords = coords.SetY(coords.y - Mathf.Sign(transform.localPosition.z));
+                transform.localPosition = transform.localPosition.SetZ(transform.localPosition.z - Mathf.Sign(transform.localPosition.z));
             }
 
             MakePeaks();
@@ -122,6 +122,8 @@ public class HeightmapConverter : MonoBehaviour
                 var y = (int)(i + coords.y) % h;
                 var x1 = (int)(j - 1 + coords.x) % w;
                 var y1 = (int)(i - 1 + coords.y) % h;
+                var px = j + coords.x;
+                var py = i + coords.y;
 
                 var centerX = drawDistanceWidth / 2;
                 var centerY = drawDistanceHeight / 2;
@@ -129,11 +131,12 @@ public class HeightmapConverter : MonoBehaviour
                 var num = i * drawDistanceWidth + j;
 
                 var pixel = heightmap.GetPixel(x, y);
+                var newPeakHeight = Mathf.PerlinNoise(px * 0.5f, py * 0.5f) + peakHeight;
 
-                var height = Mathf.PerlinNoise(x * 0.1f, y * 0.1f) - 0.5f;
-                height += Mathf.PerlinNoise(x * 0.01f, y * 0.01f) - 0.5f;
-                height += (Mathf.PerlinNoise(x * 0.5f, y * 0.5f) - 0.5f) * 0.3f;
-                height += pixel.g * peakHeight;
+                var height = Mathf.PerlinNoise(px * 0.1f, py * 0.1f) - 0.5f;
+                height += Mathf.PerlinNoise(px * 0.01f, py * 0.01f) - 0.5f;
+                height += (Mathf.PerlinNoise(px * 0.5f, py * 0.5f) - 0.5f) * 0.3f;
+                height += pixel.g * newPeakHeight;
 
                 gmesh.verts[num] = new Vector3(j - centerX, height, i - centerY);
 
@@ -175,11 +178,11 @@ public class HeightmapConverter : MonoBehaviour
                         {
                             var obj = colliderPool.ActivateObject();
                             if (obj != null)
-                                obj.transform.position = gmesh.verts[num] - Vector3.up * peakHeight + transform.position;
+                                obj.transform.position = gmesh.verts[num] - Vector3.up * newPeakHeight + transform.position;
                         }
 
                         //Ground
-                        colliderGMesh.verts[colliderVertIndex] = gmesh.verts[num] - Vector3.up * pixel.g * peakHeight;
+                        colliderGMesh.verts[colliderVertIndex] = gmesh.verts[num] - Vector3.up * pixel.g * newPeakHeight;
 
                         var cw = colliderSize * 2 - 1;
                         if (colliderVertIndex > cw && colliderVertIndex % cw > 0)
@@ -200,5 +203,9 @@ public class HeightmapConverter : MonoBehaviour
         }
         gmesh.Apply(meshFilter.sharedMesh);
         colliderGMesh.Apply(meshCollider.sharedMesh);
+
+        //This is a stupid hack but it's proven necessary
+        meshCollider.enabled = false;
+        meshCollider.enabled = true;
     }
 }

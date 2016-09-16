@@ -32,4 +32,12 @@ public class MotoInput : MonoBehaviour
     {
         return easedFollowInput;
     }
+
+    /// <summary>
+    /// This is for a special case: when the player hits the side of a peak
+    /// </summary>
+    public void ResetEasedInput()
+    {
+        easedFollowInput = 0f;
+    }
 }

@@ -2,37 +2,47 @@
 
 public static class VectorEdit
 {
-    public enum Component
-    {
-        x,
-        y,
-        z
-    }
+    public enum Component { x, y, z }
 
     //X
-    public static Vector2 SetX(Vector2 vector, float value)
+    /// <summary>
+    /// Use: myVector = myVector.SetX(0);
+    /// </summary>
+    public static Vector2 SetX(this Vector2 vector, float value)
     {
         return SetComponent(vector, value, Component.x);
     }
 
-    public static Vector3 SetX(Vector3 vector, float value)
+    /// <summary>
+    /// Use: myVector = myVector.SetX(0);
+    /// </summary>
+    public static Vector3 SetX(this Vector3 vector, float value)
     {
         return SetComponent(vector, value, Component.x);
     }
 
     //Y
-    public static Vector2 SetY(Vector2 vector, float value)
+    /// <summary>
+    /// Use: myVector = myVector.SetY(0);
+    /// </summary>
+    public static Vector2 SetY(this Vector2 vector, float value)
     {
         return SetComponent(vector, value, Component.y);
     }
 
-    public static Vector3 SetY(Vector3 vector, float value)
+    /// <summary>
+    /// Use: myVector = myVector.SetY(0);
+    /// </summary>
+    public static Vector3 SetY(this Vector3 vector, float value)
     {
         return SetComponent(vector, value, Component.y);
     }
 
     //Z
-    public static Vector3 SetZ(Vector3 vector, float value)
+    /// <summary>
+    /// Use: myVector = myVector.SetZ(0);
+    /// </summary>
+    public static Vector3 SetZ(this Vector3 vector, float value)
     {
         return SetComponent(vector, value, Component.z);
     }
@@ -44,7 +54,7 @@ public static class VectorEdit
             component == Component.y ? value : vector.y,
             component == Component.z ? value : vector.z
             );
-        
+
         return newVector;
     }
 }

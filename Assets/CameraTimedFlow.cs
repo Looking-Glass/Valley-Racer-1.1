@@ -31,6 +31,6 @@ public class CameraTimedFlow : TimedFlow
         var lerp = GetTimeNormalized(3f);
 
         var newAngle = Mathf.LerpAngle(0f, 20f, lerp);
-        transform.localEulerAngles = VectorEdit.SetX(transform.localEulerAngles, newAngle);
+        transform.localEulerAngles = transform.localEulerAngles.SetX(newAngle);
     }
 }
