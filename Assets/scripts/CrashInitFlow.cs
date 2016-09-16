@@ -18,11 +18,9 @@ public class CrashInitFlow : TimedFlow
 
     public AudioSource bikeHit;
     public SpinDegPerSecond cameraRotator;
-    //float timer;
     public Transform hypercubeTransform;
     float originHypercubeZRot;
-    float originHypercubeXRot;
-    public Transform motoChildTransform;
+    public Transform Biker;
     float originMotoChildZScale;
     Vector3 originHypercubePosition;
     public hypercubeCamera hypercubeCamera;
@@ -49,8 +47,7 @@ public class CrashInitFlow : TimedFlow
 
         //Set original values for things
         originHypercubeZRot = hypercubeTransform.localEulerAngles.z;
-        originHypercubeXRot = hypercubeTransform.localEulerAngles.x;
-        originMotoChildZScale = motoChildTransform.localScale.z;
+        originMotoChildZScale = Biker.localScale.z;
         originTubeFactor = hypercubeCamera.tubeFactor;
         originPerspectiveFactor = hypercubeCamera.perspectiveFactor;
         originHypercubeScale = hypercubeTransform.localScale;
@@ -62,6 +59,9 @@ public class CrashInitFlow : TimedFlow
         //The lerp:
         var lerp = GetTimeNormalized(0.1f);
 
+        //Turn off hypercube's follow script
+        hypercubeTransform.GetComponent<FollowBiker>().enabled = false;
+
         //return hypercube to 0 deg rotation on z
         hypercubeTransform.localEulerAngles = hypercubeTransform.localEulerAngles.SetZ(Mathf.LerpAngle(originHypercubeZRot, 0f, lerp));
 
@@ -69,22 +69,14 @@ public class CrashInitFlow : TimedFlow
         hypercubeTransform.localEulerAngles = hypercubeTransform.localEulerAngles.SetX(Mathf.LerpAngle(originHypercubeZRot, 15f, lerp));
 
         //make moto child holder return to 1, 1, 1 scale
-        motoChildTransform.localScale = motoChildTransform.localScale.SetZ(Mathf.Lerp(originMotoChildZScale, 1f, lerp));
+        Biker.localScale = Biker.localScale.SetZ(Mathf.Lerp(originMotoChildZScale, 1f, lerp));
 
         //make camera move to player's position
-
         hypercubeTransform.position = new Vector3(
-            Mathf.Lerp(originHypercubePosition.x, motoChildTransform.position.x, lerp),
-            Mathf.Lerp(originHypercubePosition.y, motoChildTransform.position.y, lerp),
-            Mathf.Lerp(originHypercubePosition.z, motoChildTransform.position.z, lerp)
+            Mathf.Lerp(originHypercubePosition.x, Biker.position.x, lerp),
+            Mathf.Lerp(originHypercubePosition.y, Biker.position.y, lerp),
+            Mathf.Lerp(originHypercubePosition.z, Biker.position.z, lerp)
             );
-
-
-        //Rotate the player's bike by a bit and push it up
-        motoChildTransform.Rotate(Vector3.right, Time.deltaTime * 30f, Space.World);
-
-        //Move it back to sync with the rotating
-        motoChildTransform.Translate(new Vector3(0, 0.1f, -0.5f) * Time.deltaTime * 1f);
 
         //Set perspective and tubefactors lower
         hypercubeCamera.tubeFactor = Mathf.Lerp(originTubeFactor, 0f, lerp);
@@ -97,12 +89,12 @@ public class CrashInitFlow : TimedFlow
     public override void OnEndAct()
     {
         //Explode and camera shake
-        explosion.transform.position = motoChildTransform.position;
+        explosion.transform.position = Biker.position;
         explosion.Explode();
         cameraShake.enabled = true;
 
         //Turn off bike and human meshrenderers
-        var mrs = motoChildTransform.gameObject.GetComponentsInChildren<MeshRenderer>();
+        var mrs = Biker.gameObject.GetComponentsInChildren<MeshRenderer>();
         for (int i = 0; i < mrs.Length; i++)
         {
             mrs[i].enabled = false;

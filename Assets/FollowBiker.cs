@@ -5,6 +5,7 @@ public class FollowBiker : MonoBehaviour
 {
     public float easedSpeed;
     public Transform toFollow;
+    public MotoInput motoInput;
     public Vector3 offset;
 
     void LateUpdate()
@@ -14,5 +15,6 @@ public class FollowBiker : MonoBehaviour
         easedMov *= Vector3.Distance(transform.position, followPos);
         easedMov = Mathf.Max(0.0001f, easedMov);
         transform.position = Vector3.MoveTowards(transform.position, followPos, easedMov);
+        transform.localEulerAngles = transform.localEulerAngles.SetZ(motoInput.GetEasedInput() * -10f);
     }
 }

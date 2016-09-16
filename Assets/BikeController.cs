@@ -9,6 +9,8 @@ public class BikeController : MonoBehaviour
     public LayerMask ground;
     public LayerMask peaks;
     public AudioSource hitMountain;
+    public ScoreKeeper scoreKeeper;
+    public bool controlsOn;
     MotoInput motoInput;
     Transform b_Main;
     Transform b_Torso;
@@ -24,7 +26,9 @@ public class BikeController : MonoBehaviour
 
     void Update()
     {
-        var bikeInput = motoInput.GetEasedInput();
+        var bikeInput = 0f;
+        if (controlsOn)
+            bikeInput = motoInput.GetEasedInput();
 
         //Moving the mountains
         var mountainMovement = Vector3.zero;
@@ -32,6 +36,7 @@ public class BikeController : MonoBehaviour
         mountainMovement += Vector3.back * travelSpeed;
         mountainMovement = mountainMovement.normalized * travelSpeed * Time.deltaTime;
         mountains.Translate(mountainMovement);
+        scoreKeeper.AddToScore(mountainMovement.z);
 
         //Grounding
         var rayHit = new RaycastHit();
@@ -56,7 +61,7 @@ public class BikeController : MonoBehaviour
             {
                 if (EventManager.playerDeath != null)
                     EventManager.playerDeath();
-                enabled = false;
+                gameObject.SetActive(false);
             }
             else
             {

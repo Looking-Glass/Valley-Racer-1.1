@@ -4,7 +4,8 @@ public class SettingChanges : MonoBehaviour
 {
     public Color[] mountainColors;
     public Color[] skyColors;
-    SpriteRenderer skyRenderer;
+    public SpriteRenderer skyRenderer;
+    public MeshRenderer mountainRenderer;
     public int index;
     ScoreKeeper scoreKeeper;
     public float settingInterval = 300;
@@ -13,8 +14,6 @@ public class SettingChanges : MonoBehaviour
     void Start()
     {
         scoreKeeper = GetComponent<ScoreKeeper>();
-        skyRenderer = GameObject.FindGameObjectWithTag("Sky").GetComponent<SpriteRenderer>();
-
     }
     
     void Update()
@@ -37,12 +36,7 @@ public class SettingChanges : MonoBehaviour
 
         skyRenderer.color = finalSkyColor;
 
-        GameObject[] mtnList = GameObject.FindGameObjectsWithTag("Mountains");
-
-        for (var i = 0; i < mtnList.Length; i++)
-        {
-            mtnList[i].GetComponent<Renderer>().material.color = finalMtnColor;
-        }
+        mountainRenderer.material.color = finalMtnColor;
     }
 
     int SafeAdd(int num, int max)
