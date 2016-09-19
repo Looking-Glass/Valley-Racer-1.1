@@ -14,15 +14,18 @@ Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\vall
 Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.296 seconds
+- Completed reload, in  0.052 seconds
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 8.634887 ms
+UnloadTime: 0.861867 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
 Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
   at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
   at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
@@ -38,19 +41,27 @@ Connection attempt failed or disconnection detected
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 4a4 -> priority: 1 
+  Thread -> id: 27d4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.256853 ms
+UnloadTime: 0.300800 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1322.
-Total: 1.109334 ms (FindLiveObjects: 0.113493 ms CreateObjectMapping: 0.044800 ms MarkObjects: 0.945067 ms  DeleteObjects: 0.005120 ms)
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.182186 ms (FindLiveObjects: 0.040533 ms CreateObjectMapping: 0.008960 ms MarkObjects: 0.125440 ms  DeleteObjects: 0.005973 ms)
 
 ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 0.02
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.058456 ms
+UnloadTime: 1.677654 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
 Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
   at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
   at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
@@ -62,8 +73,16 @@ Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSeria
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62643.
-Total: 15.795212 ms (FindLiveObjects: 3.758509 ms CreateObjectMapping: 0.709120 ms MarkObjects: 9.321394 ms  DeleteObjects: 2.004481 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 725.
+Total: 6.661125 ms (FindLiveObjects: 0.054613 ms CreateObjectMapping: 0.017493 ms MarkObjects: 0.228266 ms  DeleteObjects: 6.360752 ms)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 printed 1 ticket(s)
  
@@ -74,33 +93,35 @@ printed 1 ticket(s)
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 24.966846 ms
-Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
-  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
-  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
-  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
-  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+UnloadTime: 3.351469 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 
-Unloading 246 unused Assets to reduce memory usage. Loaded Objects now: 531.
-Total: 0.962987 ms (FindLiveObjects: 0.056320 ms CreateObjectMapping: 0.017066 ms MarkObjects: 0.151040 ms  DeleteObjects: 0.738133 ms)
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.630613 ms (FindLiveObjects: 0.045226 ms CreateObjectMapping: 0.012373 ms MarkObjects: 0.164693 ms  DeleteObjects: 0.407893 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.480427 ms
+UnloadTime: 0.486827 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1325.
-Total: 0.410880 ms (FindLiveObjects: 0.093866 ms CreateObjectMapping: 0.019200 ms MarkObjects: 0.202240 ms  DeleteObjects: 0.094720 ms)
 
-ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 30.73653
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.278186 ms (FindLiveObjects: 0.037546 ms CreateObjectMapping: 0.009813 ms MarkObjects: 0.140373 ms  DeleteObjects: 0.090453 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 43.26382
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.397549 ms
+UnloadTime: 1.729708 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
 Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
   at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
   at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
@@ -112,11 +133,43 @@ Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSeria
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 62644.
-Total: 20.314470 ms (FindLiveObjects: 8.576007 ms CreateObjectMapping: 0.450560 ms MarkObjects: 8.244488 ms  DeleteObjects: 3.042135 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.753712 ms (FindLiveObjects: 0.034133 ms CreateObjectMapping: 0.019200 ms MarkObjects: 0.283733 ms  DeleteObjects: 6.416645 ms)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 26.086847 ms
+UnloadTime: 0.512853 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.586667 ms (FindLiveObjects: 0.052906 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.151466 ms  DeleteObjects: 0.371200 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.443307 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.339200 ms (FindLiveObjects: 0.075520 ms CreateObjectMapping: 0.009813 ms MarkObjects: 0.176640 ms  DeleteObjects: 0.076800 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 86.04642
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.768000 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
 Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
   at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
   at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
@@ -128,6 +181,1010 @@ Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSeria
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 
-Unloading 244 unused Assets to reduce memory usage. Loaded Objects now: 531.
-Total: 1.067520 ms (FindLiveObjects: 0.064853 ms CreateObjectMapping: 0.029013 ms MarkObjects: 0.201386 ms  DeleteObjects: 0.771840 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.973872 ms (FindLiveObjects: 0.034560 ms CreateObjectMapping: 0.017066 ms MarkObjects: 0.224853 ms  DeleteObjects: 6.697392 ms)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.513280 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.552533 ms (FindLiveObjects: 0.043946 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.157440 ms  DeleteObjects: 0.339626 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.550827 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.319146 ms (FindLiveObjects: 0.058026 ms CreateObjectMapping: 0.011520 ms MarkObjects: 0.155733 ms  DeleteObjects: 0.093440 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 150.6685
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.051307 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 3.888216 ms (FindLiveObjects: 0.032853 ms CreateObjectMapping: 0.014933 ms MarkObjects: 0.245333 ms  DeleteObjects: 3.594669 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.533333 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.544853 ms (FindLiveObjects: 0.055040 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.175360 ms  DeleteObjects: 0.303786 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.514133 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.350720 ms (FindLiveObjects: 0.068266 ms CreateObjectMapping: 0.015360 ms MarkObjects: 0.162560 ms  DeleteObjects: 0.104533 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 190.4137
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.193814 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 2.611202 ms (FindLiveObjects: 0.041386 ms CreateObjectMapping: 0.029440 ms MarkObjects: 0.244480 ms  DeleteObjects: 2.295468 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.482560 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.569173 ms (FindLiveObjects: 0.048640 ms CreateObjectMapping: 0.012373 ms MarkObjects: 0.167253 ms  DeleteObjects: 0.340480 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.458667 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.345600 ms (FindLiveObjects: 0.044800 ms CreateObjectMapping: 0.012800 ms MarkObjects: 0.184320 ms  DeleteObjects: 0.103680 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 252.5691
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.308587 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 5.893978 ms (FindLiveObjects: 0.050346 ms CreateObjectMapping: 0.027306 ms MarkObjects: 0.315733 ms  DeleteObjects: 5.500164 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.976214 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.555520 ms (FindLiveObjects: 0.029440 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.138666 ms  DeleteObjects: 0.375466 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.521387 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.354133 ms (FindLiveObjects: 0.062720 ms CreateObjectMapping: 0.010240 ms MarkObjects: 0.184320 ms  DeleteObjects: 0.096426 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 276.6558
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.483521 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.937179 ms (FindLiveObjects: 0.034133 ms CreateObjectMapping: 0.015360 ms MarkObjects: 0.233386 ms  DeleteObjects: 6.653872 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.404587 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.534613 ms (FindLiveObjects: 0.035413 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.174506 ms  DeleteObjects: 0.312746 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.485973 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.285866 ms (FindLiveObjects: 0.031146 ms CreateObjectMapping: 0.016640 ms MarkObjects: 0.176213 ms  DeleteObjects: 0.061866 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 352.6611
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.681494 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 5.254404 ms (FindLiveObjects: 0.060160 ms CreateObjectMapping: 0.026880 ms MarkObjects: 0.277760 ms  DeleteObjects: 4.887897 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.805120 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.619947 ms (FindLiveObjects: 0.032000 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.187733 ms  DeleteObjects: 0.388693 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.439467 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.352000 ms (FindLiveObjects: 0.075093 ms CreateObjectMapping: 0.010240 ms MarkObjects: 0.175786 ms  DeleteObjects: 0.090453 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 463.5513
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.356801 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 7.186779 ms (FindLiveObjects: 0.048213 ms CreateObjectMapping: 0.024746 ms MarkObjects: 0.302506 ms  DeleteObjects: 6.810885 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.681387 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.599467 ms (FindLiveObjects: 0.064853 ms CreateObjectMapping: 0.014080 ms MarkObjects: 0.181333 ms  DeleteObjects: 0.337920 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.468907 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.289280 ms (FindLiveObjects: 0.034986 ms CreateObjectMapping: 0.009813 ms MarkObjects: 0.151466 ms  DeleteObjects: 0.092586 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 525.9691
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.745921 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.941019 ms (FindLiveObjects: 0.045226 ms CreateObjectMapping: 0.059306 ms MarkObjects: 0.401067 ms  DeleteObjects: 6.434992 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.539307 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.645547 ms (FindLiveObjects: 0.063146 ms CreateObjectMapping: 0.018773 ms MarkObjects: 0.183466 ms  DeleteObjects: 0.379306 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.439040 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.322560 ms (FindLiveObjects: 0.027306 ms CreateObjectMapping: 0.026880 ms MarkObjects: 0.177920 ms  DeleteObjects: 0.089600 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 594.009
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.200641 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.547205 ms (FindLiveObjects: 0.046933 ms CreateObjectMapping: 0.021760 ms MarkObjects: 0.289280 ms  DeleteObjects: 6.188378 ms)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.233067 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.592213 ms (FindLiveObjects: 0.032426 ms CreateObjectMapping: 0.012373 ms MarkObjects: 0.162133 ms  DeleteObjects: 0.384000 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.530773 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.350720 ms (FindLiveObjects: 0.049920 ms CreateObjectMapping: 0.012373 ms MarkObjects: 0.184746 ms  DeleteObjects: 0.103253 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 814.0319
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.207894 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 7.206832 ms (FindLiveObjects: 0.034133 ms CreateObjectMapping: 0.014080 ms MarkObjects: 0.241920 ms  DeleteObjects: 6.915419 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.440747 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.578133 ms (FindLiveObjects: 0.034986 ms CreateObjectMapping: 0.011520 ms MarkObjects: 0.154453 ms  DeleteObjects: 0.376746 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.471040 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.302080 ms (FindLiveObjects: 0.040960 ms CreateObjectMapping: 0.010240 ms MarkObjects: 0.172800 ms  DeleteObjects: 0.077226 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 892.6185
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.553921 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 7.006725 ms (FindLiveObjects: 0.043946 ms CreateObjectMapping: 0.017493 ms MarkObjects: 0.331946 ms  DeleteObjects: 6.612912 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.435627 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.675413 ms (FindLiveObjects: 0.053760 ms CreateObjectMapping: 0.015786 ms MarkObjects: 0.213760 ms  DeleteObjects: 0.391680 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.454400 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.335786 ms (FindLiveObjects: 0.062293 ms CreateObjectMapping: 0.010240 ms MarkObjects: 0.170240 ms  DeleteObjects: 0.093013 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 909.1957
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.364054 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 7.026352 ms (FindLiveObjects: 0.033706 ms CreateObjectMapping: 0.014933 ms MarkObjects: 0.288426 ms  DeleteObjects: 6.688432 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.480000 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.584533 ms (FindLiveObjects: 0.034986 ms CreateObjectMapping: 0.016640 ms MarkObjects: 0.162560 ms  DeleteObjects: 0.353706 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.475733 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.336640 ms (FindLiveObjects: 0.068693 ms CreateObjectMapping: 0.014080 ms MarkObjects: 0.148053 ms  DeleteObjects: 0.105386 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 931.3745
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.138347 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 3.149656 ms (FindLiveObjects: 0.046080 ms CreateObjectMapping: 0.024320 ms MarkObjects: 0.395093 ms  DeleteObjects: 2.682882 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.490240 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.553813 ms (FindLiveObjects: 0.045653 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.162986 ms  DeleteObjects: 0.334080 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.539307 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.331946 ms (FindLiveObjects: 0.034133 ms CreateObjectMapping: 0.014933 ms MarkObjects: 0.194986 ms  DeleteObjects: 0.087466 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 965.0386
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.326081 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.853125 ms (FindLiveObjects: 0.033706 ms CreateObjectMapping: 0.014506 ms MarkObjects: 0.241066 ms  DeleteObjects: 6.563845 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.557653 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.683947 ms (FindLiveObjects: 0.057173 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.164693 ms  DeleteObjects: 0.450133 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.500907 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.367360 ms (FindLiveObjects: 0.076373 ms CreateObjectMapping: 0.011520 ms MarkObjects: 0.174933 ms  DeleteObjects: 0.104106 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 1008.789
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.765974 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 7.034459 ms (FindLiveObjects: 0.034560 ms CreateObjectMapping: 0.014933 ms MarkObjects: 0.264106 ms  DeleteObjects: 6.720432 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.587947 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.581120 ms (FindLiveObjects: 0.045226 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.162133 ms  DeleteObjects: 0.363093 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.498773 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.294400 ms (FindLiveObjects: 0.035840 ms CreateObjectMapping: 0.016213 ms MarkObjects: 0.157440 ms  DeleteObjects: 0.084053 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 1038.298
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.069654 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 7.171419 ms (FindLiveObjects: 0.036693 ms CreateObjectMapping: 0.015360 ms MarkObjects: 0.259840 ms  DeleteObjects: 6.858672 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.468907 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.570027 ms (FindLiveObjects: 0.049493 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.163413 ms  DeleteObjects: 0.345600 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.499200 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.367786 ms (FindLiveObjects: 0.046506 ms CreateObjectMapping: 0.015360 ms MarkObjects: 0.225706 ms  DeleteObjects: 0.079786 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 1068.981
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.346134 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.781445 ms (FindLiveObjects: 0.035840 ms CreateObjectMapping: 0.020480 ms MarkObjects: 0.241920 ms  DeleteObjects: 6.482352 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.521387 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.576000 ms (FindLiveObjects: 0.045226 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.171520 ms  DeleteObjects: 0.348160 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.479573 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.337066 ms (FindLiveObjects: 0.058453 ms CreateObjectMapping: 0.009813 ms MarkObjects: 0.169386 ms  DeleteObjects: 0.098560 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 1099.879
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.167360 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 726.
+Total: 6.826245 ms (FindLiveObjects: 0.033280 ms CreateObjectMapping: 0.015360 ms MarkObjects: 0.328960 ms  DeleteObjects: 6.448645 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.512853 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 532.
+Total: 0.603733 ms (FindLiveObjects: 0.040533 ms CreateObjectMapping: 0.011520 ms MarkObjects: 0.179626 ms  DeleteObjects: 0.371626 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.496640 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 535.
+Total: 0.338773 ms (FindLiveObjects: 0.042666 ms CreateObjectMapping: 0.010240 ms MarkObjects: 0.191146 ms  DeleteObjects: 0.094720 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 1164.839
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.221547 ms
+Loading Hypercube Tools v1.12 on  Unity v5.4.0f3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 742.
+Total: 2.513922 ms (FindLiveObjects: 0.083200 ms CreateObjectMapping: 0.022613 ms MarkObjects: 0.199253 ms  DeleteObjects: 2.208428 ms)
 

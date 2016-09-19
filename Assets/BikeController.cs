@@ -61,7 +61,7 @@ public class BikeController : MonoBehaviour
             {
                 if (EventManager.playerDeath != null)
                     EventManager.playerDeath();
-                gameObject.SetActive(false);
+                enabled = false;
             }
             else
             {

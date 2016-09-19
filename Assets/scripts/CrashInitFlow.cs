@@ -20,7 +20,7 @@ public class CrashInitFlow : TimedFlow
     public SpinDegPerSecond cameraRotator;
     public Transform hypercubeTransform;
     float originHypercubeZRot;
-    public Transform Biker;
+    public Transform biker;
     float originMotoChildZScale;
     Vector3 originHypercubePosition;
     public hypercubeCamera hypercubeCamera;
@@ -47,7 +47,7 @@ public class CrashInitFlow : TimedFlow
 
         //Set original values for things
         originHypercubeZRot = hypercubeTransform.localEulerAngles.z;
-        originMotoChildZScale = Biker.localScale.z;
+        originMotoChildZScale = biker.localScale.z;
         originTubeFactor = hypercubeCamera.tubeFactor;
         originPerspectiveFactor = hypercubeCamera.perspectiveFactor;
         originHypercubeScale = hypercubeTransform.localScale;
@@ -69,13 +69,13 @@ public class CrashInitFlow : TimedFlow
         hypercubeTransform.localEulerAngles = hypercubeTransform.localEulerAngles.SetX(Mathf.LerpAngle(originHypercubeZRot, 15f, lerp));
 
         //make moto child holder return to 1, 1, 1 scale
-        Biker.localScale = Biker.localScale.SetZ(Mathf.Lerp(originMotoChildZScale, 1f, lerp));
+        biker.localScale = biker.localScale.SetZ(Mathf.Lerp(originMotoChildZScale, 1f, lerp));
 
         //make camera move to player's position
         hypercubeTransform.position = new Vector3(
-            Mathf.Lerp(originHypercubePosition.x, Biker.position.x, lerp),
-            Mathf.Lerp(originHypercubePosition.y, Biker.position.y, lerp),
-            Mathf.Lerp(originHypercubePosition.z, Biker.position.z, lerp)
+            Mathf.Lerp(originHypercubePosition.x, biker.position.x, lerp),
+            Mathf.Lerp(originHypercubePosition.y, biker.position.y, lerp),
+            Mathf.Lerp(originHypercubePosition.z, biker.position.z, lerp)
             );
 
         //Set perspective and tubefactors lower
@@ -89,16 +89,12 @@ public class CrashInitFlow : TimedFlow
     public override void OnEndAct()
     {
         //Explode and camera shake
-        explosion.transform.position = Biker.position;
+        explosion.transform.position = biker.position;
         explosion.Explode();
         cameraShake.enabled = true;
 
-        //Turn off bike and human meshrenderers
-        var mrs = Biker.gameObject.GetComponentsInChildren<MeshRenderer>();
-        for (int i = 0; i < mrs.Length; i++)
-        {
-            mrs[i].enabled = false;
-        }
+        //Turn off bike
+        biker.gameObject.SetActive(false);
     }
 
     void OnDestroy()
