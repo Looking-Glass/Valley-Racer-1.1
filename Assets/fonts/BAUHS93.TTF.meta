@@ -3,13 +3,15 @@ guid: 83bce13d475d1624197e8de18b48071b
 timeCreated: 1462902463
 licenseType: Free
 TrueTypeFontImporter:
-  serializedVersion: 3
+  serializedVersion: 4
   fontSize: 16
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  fontNames: []
+  fontName: 
+  fontNames:
+  - Bauhaus 93
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

@@ -3,13 +3,15 @@ guid: 3c796c8782f20c54ca6d1f51abf1f8a8
 timeCreated: 1462902464
 licenseType: Free
 TrueTypeFontImporter:
-  serializedVersion: 3
+  serializedVersion: 4
   fontSize: 16
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  fontNames: []
+  fontName: 
+  fontNames:
+  - Berlin Sans FB
   fallbackFontReferences:
   - {fileID: 12800000, guid: ead66119d7805dc448605acffce2fb55, type: 3}
   customCharacters: 
