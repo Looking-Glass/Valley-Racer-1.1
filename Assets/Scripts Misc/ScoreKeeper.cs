@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Globalization;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour
@@ -11,13 +13,7 @@ public class ScoreKeeper : MonoBehaviour
     public Text InitialsText;
     public GameObject NewHighScore;
     int rankToReplace;
-
-    //arcade controls
-    enum KeyUpDown
-    {
-        none, up, down
-    }
-    KeyUpDown keyUpDown = KeyUpDown.none;
+    Coroutine advanceCharacterCoroutine;
 
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?_<>";
     int charIndex;
@@ -44,7 +40,7 @@ public class ScoreKeeper : MonoBehaviour
         //1. when player dies, place the score (PlaceScore). 
         //2. if the score is in the top 10, prompt for initials. 
         //3. When the player hits enter, set the new score and move the others down.
-        if (NewHighScore.activeSelf) 
+        if (NewHighScore.activeSelf)
         {
             //before anything, erase the end
             if (InitialsText.text.Length > 0)
@@ -79,7 +75,7 @@ public class ScoreKeeper : MonoBehaviour
                 if (InitialsText.text.Length > 0)
                     InitialsText.text = InitialsText.text.Substring(0, InitialsText.text.Length - 1);
             }
-            
+
             //930 because it looks better offset -30 pixels already
             InitialsText.GetComponent<RectTransform>().anchoredPosition = new Vector2
                 (930 - InitialsText.preferredWidth / 2, InitialsText.GetComponent<RectTransform>().anchoredPosition.y);
@@ -137,23 +133,37 @@ public class ScoreKeeper : MonoBehaviour
     void CheckUpDown()
     {
         var vert = ValleyInput.GetAxis().y;
-        if (Mathf.Abs(vert) > 0.3)
+        if (vert > 0.3f)
         {
-            if (vert > 0.3f && keyUpDown != KeyUpDown.up)
-            {
-                FireChar(-1);
-                keyUpDown = KeyUpDown.up;
-            }
-
-            if (vert < -0.3f && keyUpDown != KeyUpDown.down)
-            {
-                FireChar(1);
-                keyUpDown = KeyUpDown.down;
-            }
+            if (advanceCharacterCoroutine == null)
+                advanceCharacterCoroutine = StartCoroutine(AdvanceSelection(-1));
+        }
+        else if (vert < -0.3f)
+        {
+            if (advanceCharacterCoroutine == null)
+                advanceCharacterCoroutine = StartCoroutine(AdvanceSelection(1));
         }
         else
         {
-            keyUpDown = KeyUpDown.none;
+            if (advanceCharacterCoroutine != null)
+            {
+                StopCoroutine(advanceCharacterCoroutine);
+                advanceCharacterCoroutine = null;
+            }
+        }
+    }
+
+    //Fires once, waits x seconds, then advances rapidly while held down.
+    IEnumerator AdvanceSelection(int i)
+    {
+        FireChar(i);
+
+        yield return new WaitForSeconds(0.3f);
+
+        while (true)
+        {
+            FireChar(i);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 
@@ -174,26 +184,12 @@ public class ScoreKeeper : MonoBehaviour
             bestDistance = CurrentScore;
         }
 
-        var distToDisplay = CurrentScore;
-
-        if (inMiles)
-        {
-            distToDisplay = DistInKM(distToDisplay);
-        }
-
-        scoreText.text = ConvertToNiceDigits(distToDisplay) + " KM";
-    }
-
-    public static float DistInKM(float dist)
-    {
-        float distToReturn = dist * 0.004f;
-        distToReturn *= 1.609f;
-        return distToReturn;
+        scoreText.text = "SCORE: " + ConvertToNiceDigits(CurrentScore);
     }
 
     public static string ConvertToNiceDigits(float n)
     {
-        string digits = n.ToString("0.0");
+        string digits = string.Format("{0,6:##,##0}", n * 100);
         return digits;
     }
 
@@ -212,5 +208,5 @@ public class ScoreKeeper : MonoBehaviour
     {
         EventManager.playerDeath -= OnPlayerDeath;
     }
-    
+
 }

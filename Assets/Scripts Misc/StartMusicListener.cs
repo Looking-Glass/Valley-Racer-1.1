@@ -8,7 +8,7 @@ public class StartMusicListener : MonoBehaviour
 
     void Start()
     {
-        EventManager.gameStart += OnGameStart;
+        EventManager.playerPressedStart += OnGameStart;
 
     }
 
@@ -30,6 +30,6 @@ public class StartMusicListener : MonoBehaviour
 
     void OnDestroy()
     {
-        EventManager.gameStart -= OnGameStart;
+        EventManager.playerPressedStart -= OnGameStart;
     }
 }

@@ -59,6 +59,10 @@ public class InitialScenewideAnim : MonoBehaviour
         bikeController.controlsOn = true;
         followBiker.enabled = true;
         mountains.ReplaceHeightmap(mainHeightmap);
+
+        //Start the score counting
+        if (EventManager.gameStart != null)
+            EventManager.gameStart();
     }
 
     void UpdateSurrogates()

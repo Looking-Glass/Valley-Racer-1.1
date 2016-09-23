@@ -29,4 +29,9 @@ public class CameraShake : MonoBehaviour
 
         strength = Mathf.Lerp(startingStrength, 0f, timer / (duration != 0 ? duration : 1f));
     }
+
+    public void Shake()
+    {
+        enabled = true;
+    }
 }

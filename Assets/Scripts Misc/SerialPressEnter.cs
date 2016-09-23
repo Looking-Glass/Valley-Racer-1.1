@@ -50,8 +50,8 @@ public class SerialPressEnter : MonoBehaviour
     {
         spriteBlink.blinkInterval = 0.01f;
         yield return new WaitForSeconds(1.5f);
-        if (EventManager.gameStart != null)
-            EventManager.gameStart();
+        if (EventManager.playerPressedStart != null)
+            EventManager.playerPressedStart();
         async.allowSceneActivation = true;
     }
 

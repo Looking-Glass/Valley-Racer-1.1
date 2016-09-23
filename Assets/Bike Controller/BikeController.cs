@@ -15,6 +15,7 @@ public class BikeController : MonoBehaviour
     Transform b_Main;
     Transform b_Torso;
     Transform b_Head;
+    bool gameStarted;
 
     void Start()
     {
@@ -22,6 +23,12 @@ public class BikeController : MonoBehaviour
         b_Main = transform.FindDeepChild("b_Main");
         b_Torso = transform.FindDeepChild("b_Torso");
         b_Head = transform.FindDeepChild("b_Head");
+        EventManager.gameStart += OnGameStart;
+    }
+
+    void OnGameStart()
+    {
+        gameStarted = true;
     }
 
     void Update()
@@ -36,7 +43,8 @@ public class BikeController : MonoBehaviour
         mountainMovement += Vector3.back * travelSpeed;
         mountainMovement = mountainMovement.normalized * travelSpeed * Time.deltaTime;
         mountains.Translate(mountainMovement);
-        scoreKeeper.AddToScore(mountainMovement.z);
+        if (gameStarted)
+            scoreKeeper.AddToScore(mountainMovement.z);
 
         //Grounding
         var rayHit = new RaycastHit();
@@ -70,5 +78,10 @@ public class BikeController : MonoBehaviour
                 hitMountain.Play();
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        EventManager.gameStart -= OnGameStart;
     }
 }
