@@ -1,0 +1,1 @@
+Pre-intro is potentially going to be used as a custom splash screen, but for now it immediately switches to the intro scene.

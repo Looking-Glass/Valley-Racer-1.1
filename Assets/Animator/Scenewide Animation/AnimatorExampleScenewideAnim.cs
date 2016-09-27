@@ -7,7 +7,6 @@ public class AnimatorExampleScenewideAnim : ScenewideAnimation
     public Transform[] CubeSurrogatePair = new Transform[2];
     public Transform[] CylinderSurrogatePair = new Transform[2];
     public Transform[] SphereSurrogatePair = new Transform[2];
-    Animator animator;
 
     void Awake()
     {
