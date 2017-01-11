@@ -17,14 +17,14 @@ Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\vall
 Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.039 seconds
+- Completed reload, in  0.171 seconds
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.916907 ms
+UnloadTime: 8.151878 ms
 Loading Hypercube Tools v1.12 on  Unity v5.5.0b4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -44,38 +44,30 @@ Connection attempt failed or disconnection detected
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1d00 -> priority: 1 
+  Thread -> id: 1cb8 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.272640 ms
+UnloadTime: 0.253866 ms
 Loading Hypercube Tools v1.12 on  Unity v5.5.0b4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 
 Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 621.
-Total: 4.368215 ms (FindLiveObjects: 0.078080 ms CreateObjectMapping: 0.012373 ms MarkObjects: 4.268375 ms  DeleteObjects: 0.008106 ms)
+Total: 0.777812 ms (FindLiveObjects: 0.084479 ms CreateObjectMapping: 0.011093 ms MarkObjects: 0.676692 ms  DeleteObjects: 0.005119 ms)
 
 ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 0.02
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.676374 ms
+UnloadTime: 0.875945 ms
 Loading Hypercube Tools v1.12 on  Unity v5.5.0b4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 805.
-Total: 6.818136 ms (FindLiveObjects: 0.262400 ms CreateObjectMapping: 0.051626 ms MarkObjects: 1.241600 ms  DeleteObjects: 5.258668 ms)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-printed 1 ticket(s)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Total: 6.113696 ms (FindLiveObjects: 0.059306 ms CreateObjectMapping: 0.020906 ms MarkObjects: 0.241492 ms  DeleteObjects: 5.790710 ms)
 
 printed 1 ticket(s)
  
@@ -98,36 +90,36 @@ printed 1 ticket(s)
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.803415 ms
+UnloadTime: 8.007238 ms
 Loading Hypercube Tools v1.12 on  Unity v5.5.0b4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 
-Unloading 76 unused Assets to reduce memory usage. Loaded Objects now: 600.
-Total: 0.721920 ms (FindLiveObjects: 0.067840 ms CreateObjectMapping: 0.025600 ms MarkObjects: 0.233386 ms  DeleteObjects: 0.394240 ms)
+Unloading 78 unused Assets to reduce memory usage. Loaded Objects now: 600.
+Total: 0.581972 ms (FindLiveObjects: 0.055039 ms CreateObjectMapping: 0.036266 ms MarkObjects: 0.156586 ms  DeleteObjects: 0.333226 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.499200 ms
+UnloadTime: 0.402772 ms
 Loading Hypercube Tools v1.12 on  Unity v5.5.0b4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 625.
-Total: 0.400213 ms (FindLiveObjects: 0.054613 ms CreateObjectMapping: 0.050773 ms MarkObjects: 0.204800 ms  DeleteObjects: 0.088746 ms)
+Total: 0.296959 ms (FindLiveObjects: 0.029013 ms CreateObjectMapping: 0.031999 ms MarkObjects: 0.160426 ms  DeleteObjects: 0.075519 ms)
 
-ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 48.45176
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 35.46246
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.951040 ms
+UnloadTime: 1.071358 ms
 Loading Hypercube Tools v1.12 on  Unity v5.5.0b4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 
 Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 835.
-Total: 2.632107 ms (FindLiveObjects: 0.064853 ms CreateObjectMapping: 0.025600 ms MarkObjects: 0.288000 ms  DeleteObjects: 2.252800 ms)
+Total: 2.367569 ms (FindLiveObjects: 0.071679 ms CreateObjectMapping: 0.014933 ms MarkObjects: 0.225706 ms  DeleteObjects: 2.054823 ms)
 
