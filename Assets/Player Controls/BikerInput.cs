@@ -8,11 +8,19 @@ public class BikerInput : MonoBehaviour
     public float easedSpeed = 15f;
     float followInput;
     float easedFollowInput;
+    LeapMotoControls leapMotoControls;
+
+    void Start()
+    {
+        leapMotoControls = FindObjectOfType<LeapMotoControls>();
+    }
 
     //Note: This script runs first in script execution order.
     void Update()
     {
         var input = ValleyInput.GetAxis().x;
+        if (leapMotoControls != null)
+            leapMotoControls.GetLeapMotoAngle(ref input);
 
         var followMov = followSpeed * Time.deltaTime;
         followInput = Mathf.MoveTowards(followInput, input, followMov);

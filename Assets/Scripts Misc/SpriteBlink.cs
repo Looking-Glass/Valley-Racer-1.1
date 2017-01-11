@@ -7,7 +7,7 @@ public class SpriteBlink : MonoBehaviour
     public float blinkInterval = 0.5f;
     float timer;
 
-    void Start()
+    void OnEnable()
     {
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();

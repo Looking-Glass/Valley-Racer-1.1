@@ -25,6 +25,7 @@ public class CrashSequence : MonoBehaviour
         cameraShake.Shake();
         followBiker.enabled = false;
         biker.SetActive(false);
+        FindObjectOfType<LeapSkipHighScorePrompt>().enabled = true;
 
         StartCoroutine(HypercubeSpinTransition());
         StartCoroutine(HypercubeTransformTransition());
