@@ -10,9 +10,8 @@ public class SceneToggle : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > littleBuffer) //this is just a little buffer
-            if (ValleyInput.GetEnterButtonDown())
-                ToggleScene();
+        if (ValleyInput.GetEnterButtonDown())
+            ToggleScene();
     }
 
     void OnEnable()
@@ -22,6 +21,7 @@ public class SceneToggle : MonoBehaviour
 
     public void ToggleScene()
     {
-        SceneManager.LoadScene(sceneToGo);
+        if (timer > littleBuffer) //this is just a little buffer
+            SceneManager.LoadScene(sceneToGo);
     }
 }

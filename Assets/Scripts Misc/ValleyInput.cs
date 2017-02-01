@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Leap.Unity;
+using UnityEngine;
 
 /// <summary>
 /// Generalized input, handles multiple buttons and axis + keyboard
