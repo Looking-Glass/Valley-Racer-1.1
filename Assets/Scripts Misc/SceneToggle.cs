@@ -21,7 +21,7 @@ public class SceneToggle : MonoBehaviour
 
     public void ToggleScene()
     {
-        if (timer > littleBuffer) //this is just a little buffer
+        //if (timer > littleBuffer) //this is just a little buffer
             SceneManager.LoadScene(sceneToGo);
     }
 }

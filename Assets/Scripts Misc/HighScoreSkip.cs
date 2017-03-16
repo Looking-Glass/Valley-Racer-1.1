@@ -28,7 +28,8 @@ public class HighScoreSkip : MonoBehaviour
                 }
             }
         }
-        if (input.frontScreen.touches.Length > 0)
+        if (input.touchPanel == null) return;
+        if (input.touchPanel.touches.Length > 0)
         {
             highScoreDisplayToSkip.SetActive(false);
             FindObjectOfType<SceneToggle>().enabled = true;

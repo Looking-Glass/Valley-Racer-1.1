@@ -62,6 +62,7 @@ public class ScoreKeeper : MonoBehaviour
                 {
                     ReplaceScore(CurrentScore, InitialsText.text);
                     GetComponent<SceneToggle>().ToggleScene();
+                    print("heyyyyy ya");
                     //TODO: make this less instant, make it so your initials flash a bit then it takes you to high score.
                 }
                 else //SOLIDIFYYYYYYYY

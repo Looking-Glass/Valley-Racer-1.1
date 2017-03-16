@@ -29,6 +29,11 @@ public class InitialScenewideAnim : MonoBehaviour
     }
     */
 
+    void Awake()
+    {
+        hypercube = hypercubeCamera.mainCam;
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();

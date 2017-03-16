@@ -73,7 +73,9 @@ public class BikerInput : MonoBehaviour
     public float GetTouchInput()
     {
         float touchInput = 0f;
-        var touches = input.frontScreen.touches;
+        if (input.touchPanel == null)
+            return 0;
+        var touches = input.touchPanel.touches;
         foreach (touch touch in touches)
         {
             touchInput = Mathf.Lerp(-1 * touchScale, 1 * touchScale, touch.posX);

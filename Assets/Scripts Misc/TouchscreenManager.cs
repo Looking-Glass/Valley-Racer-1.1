@@ -15,7 +15,9 @@ public class TouchscreenManager : MonoBehaviour
 
     void Update()
     {
-        var touches = input.frontScreen.touches;
+        if (input.touchPanel == null)
+            return;
+        var touches = input.touchPanel.touches;
         foreach (touch touch in touches)
         {
             //scene 1 (intro screen)

@@ -1,0 +1,1230 @@
+Initialize engine version: 5.5.0b4 (9f8737ccd563)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   21.20.16.4550
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
+Loading C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
+- Completed reload, in  0.277 seconds
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\grena\Documents\Unity Projects\Valley-Racer-1.1\valley-win-1.3_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1200 60Hz; virtual: 1920x1200 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.141760 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+HandPool.ModelsParent needs to reference the parent transform of the hand models.  This transform should be a child of the LMHeadMountedRig transform.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at TouchscreenManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Connection attempt failed or disconnection detected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1418 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.339626 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 720.
+Total: 0.362240 ms (FindLiveObjects: 0.053760 ms CreateObjectMapping: 0.040533 ms MarkObjects: 0.261120 ms  DeleteObjects: 0.005973 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 0.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 172.438187 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 878.
+Total: 7.677013 ms (FindLiveObjects: 0.043520 ms CreateObjectMapping: 0.041386 ms MarkObjects: 0.341333 ms  DeleteObjects: 7.250773 ms)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 213.051743 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 702.
+Total: 0.773120 ms (FindLiveObjects: 0.096000 ms CreateObjectMapping: 0.031573 ms MarkObjects: 0.239786 ms  DeleteObjects: 0.404906 ms)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 172.526505 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 730.
+Total: 0.546986 ms (FindLiveObjects: 0.052906 ms CreateObjectMapping: 0.040106 ms MarkObjects: 0.266240 ms  DeleteObjects: 0.186880 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 18.03534
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 124.522667 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 880.
+Total: 2.935466 ms (FindLiveObjects: 0.041813 ms CreateObjectMapping: 0.029866 ms MarkObjects: 0.312746 ms  DeleteObjects: 2.550613 ms)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 251.866882 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 75 unused Assets to reduce memory usage. Loaded Objects now: 699.
+Total: 0.646826 ms (FindLiveObjects: 0.052906 ms CreateObjectMapping: 0.037973 ms MarkObjects: 0.265386 ms  DeleteObjects: 0.290133 ms)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 182.208847 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 724.
+Total: 0.527786 ms (FindLiveObjects: 0.074666 ms CreateObjectMapping: 0.040960 ms MarkObjects: 0.290133 ms  DeleteObjects: 0.121173 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 84.83981
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 158.844162 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 880.
+Total: 7.264853 ms (FindLiveObjects: 0.042666 ms CreateObjectMapping: 0.032853 ms MarkObjects: 0.527786 ms  DeleteObjects: 6.660266 ms)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 129.105057 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 702.
+Total: 0.783786 ms (FindLiveObjects: 0.040533 ms CreateObjectMapping: 0.033706 ms MarkObjects: 0.285866 ms  DeleteObjects: 0.423253 ms)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 132.008957 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 724.
+Total: 0.633173 ms (FindLiveObjects: 0.069120 ms CreateObjectMapping: 0.027306 ms MarkObjects: 0.333653 ms  DeleteObjects: 0.189013 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 100.6921
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 140.264526 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 880.
+Total: 8.025599 ms (FindLiveObjects: 0.190293 ms CreateObjectMapping: 0.117333 ms MarkObjects: 0.378880 ms  DeleteObjects: 7.337813 ms)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 194.089813 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 702.
+Total: 0.875520 ms (FindLiveObjects: 0.057600 ms CreateObjectMapping: 0.040106 ms MarkObjects: 0.268373 ms  DeleteObjects: 0.509013 ms)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 135.522125 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 730.
+Total: 0.528213 ms (FindLiveObjects: 0.072960 ms CreateObjectMapping: 0.046506 ms MarkObjects: 0.257706 ms  DeleteObjects: 0.129706 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 114.5404
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 173.615784 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 880.
+Total: 5.905493 ms (FindLiveObjects: 0.042240 ms CreateObjectMapping: 0.037973 ms MarkObjects: 0.299520 ms  DeleteObjects: 5.524906 ms)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 141.923843 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 702.
+Total: 0.814933 ms (FindLiveObjects: 0.061866 ms CreateObjectMapping: 0.046080 ms MarkObjects: 0.300373 ms  DeleteObjects: 0.406186 ms)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 201.668701 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 730.
+Total: 0.553813 ms (FindLiveObjects: 0.075946 ms CreateObjectMapping: 0.037120 ms MarkObjects: 0.317013 ms  DeleteObjects: 0.123306 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 131.605
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 156.301651 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 880.
+Total: 8.286720 ms (FindLiveObjects: 0.047360 ms CreateObjectMapping: 0.028586 ms MarkObjects: 0.358400 ms  DeleteObjects: 7.851946 ms)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+printed 1 ticket(s)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 172.903259 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 702.
+Total: 0.910080 ms (FindLiveObjects: 0.062720 ms CreateObjectMapping: 0.079786 ms MarkObjects: 0.329386 ms  DeleteObjects: 0.437760 ms)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 196.178772 ms
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+Exception: The port `' does not exist. StackTrace:   at System.IO.Ports.WinSerialStream.ReportIOError (System.String optional_arg) [0x00000] in <filename unknown>:0 
+  at System.IO.Ports.WinSerialStream..ctor (System.String port_name, Int32 baud_rate, Int32 data_bits, Parity parity, StopBits sb, Boolean dtr_enable, Boolean rts_enable, Handshake hs, Int32 read_timeout, Int32 write_timeout, Int32 read_buffer_size, Int32 write_buffer_size) [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.WinSerialStream:.ctor (string,int,int,System.IO.Ports.Parity,System.IO.Ports.StopBits,bool,bool,System.IO.Ports.Handshake,int,int,int,int)
+  at System.IO.Ports.SerialPort.Open () [0x00000] in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.Ports.SerialPort:Open ()
+  at SerialThreadKA.AttemptConnection () [0x00000] in <filename unknown>:0 
+  at SerialThreadKA.RunForever () [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 730.
+Total: 0.455680 ms (FindLiveObjects: 0.053333 ms CreateObjectMapping: 0.027306 ms MarkObjects: 0.279466 ms  DeleteObjects: 0.095146 ms)
+
+ASYNC LOAD STARTED - DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH 189.4182
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not locate Volume calibration file!
+Is Volume connected via USB?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The data file: hardwareCalibration.txt does not exist, and therefore could not be read.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Could not read calibration data from Volume!
+Is Volume connected via USB? Using defaults...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Volume config file lacks touch screen hardware specs!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Connection established to COM4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Front Touch Screen is ready and initialized.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Win32Exception: The system cannot find the file specified.
+
+  at System.Diagnostics.Process.Start_shell (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start_common (System.Diagnostics.ProcessStartInfo startInfo, System.Diagnostics.Process process) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x00000] in <filename unknown>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00000] in <filename unknown>:0 
+  at MetaSceneScript.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+UnloadTime: 124.942940 ms
+Loading Hypercube Tools v1.72 on  Unity v5.5.0b4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 916.
+Total: 2.604373 ms (FindLiveObjects: 0.062720 ms CreateObjectMapping: 0.030293 ms MarkObjects: 0.299093 ms  DeleteObjects: 2.211840 ms)
+
