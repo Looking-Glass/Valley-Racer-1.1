@@ -58,14 +58,20 @@ public class BikerInput : MonoBehaviour
     /// </summary>
     public float GetLeapInput()
     {
+        //temporarily disabled leap
+        /*
         if (leapService == null) leapService = FindObjectOfType<LeapServiceProvider>();
-        var hands = leapService.CurrentFrame.Hands;
-        if (hands.Count > 0)
+        if (leapService != null && leapService.CurrentFrame != null)
         {
-            float compensation = hands[0].IsRight ? 1 : -1;
-            compensation *= 0.1f;
-            return -Mathf.Clamp((hands[0].PalmNormal.ToVector3().x + compensation) * 1.1f, -1f, 1f);
+            var hands = leapService.CurrentFrame.Hands;
+            if (hands.Count > 0)
+            {
+                float compensation = hands[0].IsRight ? 1 : -1;
+                compensation *= 0.1f;
+                return -Mathf.Clamp((hands[0].PalmNormal.ToVector3().x + compensation) * 1.1f, -1f, 1f);
+            }
         }
+        */
         return 0f;
     }
 
