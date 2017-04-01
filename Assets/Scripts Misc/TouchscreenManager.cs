@@ -6,40 +6,50 @@ using UnityEngine.SceneManagement;
 
 public class TouchscreenManager : MonoBehaviour
 {
-    hypercubeCamera h;
-
-    void Start()
-    {
-        h = FindObjectOfType<hypercubeCamera>();
-    }
+    int debugCounter = 0;
+    float buffer;
+    float bufferThreshold = 1f;
 
     void Update()
     {
+        buffer += Time.deltaTime;
         if (input.touchPanel == null)
+        {
+            if (debugCounter == 100)
+            {
+                debugCounter = 0;
+                print("touchscreen null");
+            }
+            debugCounter++;
             return;
+
+        }
         var touches = input.touchPanel.touches;
         foreach (touch touch in touches)
         {
             //scene 1 (intro screen)
-            if (SceneManager.GetActiveScene().buildIndex == 1)
+            if (buffer > bufferThreshold && SceneManager.GetActiveScene().buildIndex == 1)
             {
                 FindObjectOfType<SerialPressEnter>().StartGame();
+                buffer = 0;
             }
 
             //scene 2 (biker scene)
-            if (SceneManager.GetActiveScene().buildIndex == 2)
+            if (buffer > bufferThreshold && SceneManager.GetActiveScene().buildIndex == 2)
             {
                 //this is handled in BikerInput.cs
                 if (FindObjectOfType<BikeController>() == null) //if the player is dead. i know this is lazy
                 {
                     FindObjectOfType<SceneToggle>().ToggleScene();
+                    buffer = 0;
                 }
             }
 
             //scene 3 (hi score screen)
-            if (SceneManager.GetActiveScene().buildIndex == 3)
+            if (buffer > bufferThreshold && SceneManager.GetActiveScene().buildIndex == 3)
             {
                 FindObjectOfType<SceneToggle>().ToggleScene();
+                buffer = 0;
             }
         }
     }
