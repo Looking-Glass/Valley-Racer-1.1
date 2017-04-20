@@ -13,7 +13,6 @@ public class SerialPressEnter : MonoBehaviour
     void Start()
     {
         spriteBlink = GetComponent<SpriteBlink>();
-        StartCoroutine(load());
     }
 
     void Update()
@@ -57,16 +56,7 @@ public class SerialPressEnter : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         if (EventManager.playerPressedStart != null)
             EventManager.playerPressedStart();
-        async.allowSceneActivation = true;
+        SceneManager.LoadScene(2);
     }
-
-    IEnumerator load()
-    {
-        Debug.LogWarning("ASYNC LOAD STARTED - " +
-           "DO NOT EXIT PLAY MODE UNTIL SCENE LOADS... UNITY WILL CRASH " + Time.time);
-        async = SceneManager.LoadSceneAsync(2);
-        async.allowSceneActivation = false;
-        yield return async;
-        Debug.Log("Level done loading " + Time.time);
-    }
+    
 }
