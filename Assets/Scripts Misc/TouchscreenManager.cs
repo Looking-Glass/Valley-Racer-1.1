@@ -8,11 +8,17 @@ public class TouchscreenManager : MonoBehaviour
 {
     int debugCounter = 0;
     float buffer;
-    float bufferThreshold = 1f;
+    float bufferThreshold = 2f;
 
     void Update()
     {
         buffer += Time.deltaTime;
+        //don't let buffer advance if it's scene 2 and biker is still alive
+        if (SceneManager.GetActiveScene().buildIndex == 2 && FindObjectOfType<BikeController>() != null)
+        {
+            buffer = 0;
+        }
+
         if (input.touchPanel == null)
         {
             if (debugCounter == 100)
@@ -27,6 +33,12 @@ public class TouchscreenManager : MonoBehaviour
         var touches = input.touchPanel.touches;
         foreach (touch touch in touches)
         {
+            //hypercube exit checker update
+            if (touch.posX < 0.1f && touch.posY > 0.9f)
+            {
+                continue;
+            }
+
             //scene 1 (intro screen)
             if (buffer > bufferThreshold && SceneManager.GetActiveScene().buildIndex == 1)
             {
